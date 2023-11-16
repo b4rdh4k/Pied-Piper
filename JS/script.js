@@ -1,6 +1,4 @@
-// JavaScript
-window.onload = function() {
-    setTimeout(function() {
-        document.getElementById('loader').style.display = 'none';
-    }, 3000);
-};
+
+document.getElementById('navbar-toggle').addEventListener('click', function() {
+    document.getElementById('navbar').classList.toggle('open');
+});
