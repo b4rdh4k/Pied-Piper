@@ -13,13 +13,22 @@
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background-color: #333;
+    background-color: lightpink;
     color: #fff;
 }
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
 
+.brand-name {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
 .navbar-menu {
     list-style: none;
     display: flex;
+    margin-left: auto;
 }
 
 .navbar-menu li a {
@@ -44,5 +53,54 @@
 
     .navbar.open .navbar-menu {
         display: flex;
+    }
+}
+
+.article-column {
+    width: 100px;
+    height: 100vh; 
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 12.1vh;
+    margin-right: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    z-index: 2; /* per me dal perfundi navbarit */
+    padding: 1em;
+    border: 1px solid white;
+    writing-mode: vertical-rl;
+}
+
+#article-container {
+    position: relative;
+}
+
+#article1, #article2, #article3 {
+    position: absolute;
+}
+
+/* e ndreq pozicionin kur eshte webfaqja e hapne ne laptop */
+#article1 { right: 0; }
+#article2 { right: 108px; }
+#article3 { right: 216px; } 
+
+/* e ndreq pozicionin kur webfaqja eshte e hapt ne ekrane tvogla, responsive */
+@media (max-width: 768px) {
+    .article-column {
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+        top: 0; 
+        margin-right: 0;
+    }
+
+    #article1, #article2, #article3 {
+        position: static; /* ne ekrane te vogla i merr qeto columns edhe i stack */
+        right: auto;
     }
 }
