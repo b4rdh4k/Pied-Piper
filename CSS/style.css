@@ -1,0 +1,35 @@
+/*Main index*/
+#main {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+/* loader page */
+#loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+#loader > div {
+    width: 100%;
+    height: 100%;
+}
+
+#loader > div:nth-child(1) {background: #FFB3BA;}
+#loader > div:nth-child(2) {background: #FFDFBA;}
+#loader > div:nth-child(3) {background: #FFFFBA;}
+#loader > div:nth-child(4) {background: #BAFFC9;}
+#loader > div:nth-child(5) {background: #BAE1FF;}
+#loader > div:nth-child(6) {background: #BABEFF;}
+#loader > div:nth-child(7) {background: #DABAFF;}
