@@ -1,4 +1,4 @@
-/*Main index*/
+/*INDEX*/
 #main {
     background-color: #fff;
     width: 100%;
@@ -103,4 +103,58 @@
         position: static; /* ne ekrane te vogla i merr qeto columns edhe i stack */
         right: auto;
     }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+}
+
+.content-container {
+    flex: 1; /*e mbushin hapesiren bosh*/
+    display: flex;
+    flex-direction: column;
+    margin-right: 350px;
+    margin-top: 5px;
+    height: max-content;
+}
+
+.about-me {
+    border: 1px solid white;
+    background-color: lightpink;
+    height: 386px;
+}
+
+@media (max-width: 768px) {
+    .article-column {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        width: 100%; /* kur tshkojne poshte horizontalisht */
+        height: 100px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .article-container {
+        flex: 1;
+    }
+
+    .about-me {
+        height: 50%;
+        margin-bottom: 5px; 
+    }
+
+    .content-container {
+        margin-right: 0; 
+    }
+    
+.navbar,
+.article-column {
+    width: 100%;
+}
+.about-me{
+    width: 105.5%;/*se po del about-me ma e shkurte in width se kto tjerat kur po e zvogloj krejt*/
+}
 }
