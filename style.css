@@ -129,6 +129,27 @@ h5{
 }
 
 /* Responsive */
+
+@media screen and (max-width: 768px) {
+    footer {
+        position: relative; 
+        padding: 20px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 15px; 
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    footer {
+        padding: 10px; 
+    }
+}
+
 @media screen and (max-width: 768px) {
     body {
         font-size: 80%;
