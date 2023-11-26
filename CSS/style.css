@@ -1,242 +1,46 @@
-/*INDEX*/
-
-*{
-    padding: 0;
+body {
     margin: 0;
-}
-
-body{
-    background-image: url('../Images/popart.jpg');
-    background-size: cover;
-    background-position: center;
-
-    margin: 0; 
-  
-}
-
-#main {
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
     padding: 0;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
+    font-family: Arial, sans-serif;
 }
+
+header {
+    background-color: #f5e9d3; /* Light nude background color for the navbar */
+    padding: 10px; /* Adjust as needed */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 1.5em;
-    background-color: lightpink;
-    color: #fff;
-}
-.navbar-brand {
-    display: flex;
     align-items: center;
 }
 
-.brand-name {
-    font-size: 1.5em;
-    margin-right: 1em;
+.navbar-logo img {
+    max-width: 50px; /* Adjust the size of the logo as needed */
 }
+
 .navbar-menu {
-    list-style: none;
     display: flex;
-    margin-left: auto;
 }
 
-.navbar-menu li a {
-    color: #fff;
-    padding: 0 1em;
+.navbar-menu a {
     text-decoration: none;
+    color: #333; /* Text color for the navbar links */
+    margin-right: 10px; /* Adjust as needed for spacing between links */
 }
 
-.navbar-toggle {
-    display: none;
-}
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-@media (max-width: 768px) {
     .navbar-menu {
-        display: none;
-        flex-direction: column;
+        margin-top: 10px; /* Add spacing between the logo and the links in mobile view */
     }
 
-    .navbar-toggle {
+    .navbar-menu a {
         display: block;
+        margin-bottom: 5px; /* Add spacing between the links in mobile view */
     }
-
-    .navbar.open .navbar-menu {
-        display: flex;
-    }
-}
-
-.article-column {
-    width: 100px;
-    height: 100vh; 
-    background-color: lightpink;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: fixed;
-    top: 12.1vh;
-    margin-right: 8px;
-    margin-top: 5px;
-    cursor: pointer;
-    z-index: 2; /* per me dal perfundi navbarit */
-    padding: 1em;
-    border: 1px solid white;
-    writing-mode: vertical-rl;
-}
-
-#article-container {
-    position: relative;
-}
-
-#article1, #article2, #article3 {
-    position: absolute;
-}
-
-.image-border {
-    border: 1px solid #000000; /* Adjust the border size and color as needed */
-    border-radius: 10px; /* Optional: Add rounded corners */
-}
-
-.image-caption {
-    font-size: 1.5em;
-    margin-top: 10px;
-    color: #030303; /* Optional: Adjust the color of the image caption */
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background-color: lightpink; 
-    padding: 0px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.images {
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px; /* Set a maximum width for the images if needed */
-    margin: 0 auto; /* Center the .images container horizontally */
-    padding-top: 240px;
-
-}
-
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 30px;
-    margin-bottom: 20px;
-    width: 100%; /* Take up the full width within the .images container */
-
-}
-
-.image-container img {
-    width: 100%; /* Make the image take up the full width of its container */
-    max-width: 1000px; /* Set a maximum width for the image if needed */
-    height: auto;
-    border-radius: 10px;
-
-}
-
-.image-caption {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-/* e ndreq pozicionin kur eshte webfaqja e hapne ne laptop */
-#article1 { right: 0; }
-#article2 { right: 108px; }
-#article3 { right: 216px; } 
-
-/* e ndreq pozicionin kur webfaqja eshte e hapt ne ekrane tvogla, responsive */
-@media (max-width: 768px) {
-    .article-column {
-        width: 100%; 
-        height: auto; 
-        position: relative; 
-        top: 0; 
-        margin-right: 0;
-    }
-
-    #article1, #article2, #article3 {
-        position: static; /* ne ekrane te vogla i merr qeto columns edhe i stack */
-        right: auto;
-    }
-}
-main {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 60px);
-}
-
-.content-container {
-    flex: 1; /*e mbushin hapesiren bosh*/
-    display: flex;
-    flex-direction: column;
-    margin-right: 350px;
-    margin-top: 5px;
-    height: max-content;
-}
-
-.about-me {
-    border: 1px solid white;
-    background-color: lightpink;
-    height: 386px;
-}
-
-
-@media (max-width: 768px) {
-    .article-column {
-        writing-mode: horizontal-tb;
-        text-orientation: mixed;
-        width: 100%; /* kur tshkojne poshte horizontalisht */
-        height: 100px;
-    }
-
-    main {
-        flex-direction: column;
-    }
-
-    .article-container {
-        flex: 1;
-    }
-
-    .about-me {
-        height: 50%;
-        margin-bottom: 5px; 
-    }
-
-    .content-container {
-        margin-right: 0; 
-    }
-    
-.navbar,
-.article-column {
-    width: 100%;
-}
-.about-me{
-    width: 105.5%;/*se po del about-me ma e shkurte in width se kto tjerat kur po e zvogloj krejt*/
-}
 }
