@@ -85,6 +85,19 @@ button{
     background-position: center;
     background-size: cover;
 }
+
+footer {
+    background: url(img/footer-background-011.jpg) center;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .card1{
     background-image: url(img/image-1.jpeg);
 }
@@ -95,7 +108,7 @@ button{
     background-image: url(img/image-3.jpeg);
 }
 .card4{
-    background-image: url(img/image-4.jpeg);
+    background-image: url(img/image-4.jpg);
 }
 .card:hover{
     transform: translateY(10px);
