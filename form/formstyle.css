@@ -49,11 +49,13 @@ nav ul li a{
   }
   
   form {
-    width: 60vw;
+    width: 80vw;
     max-width: 500px;
-    min-width: 300px;
     margin: 0 auto;
-    padding-bottom: 2em;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
   }
   
   fieldset {
@@ -69,6 +71,7 @@ nav ul li a{
   label {
     display: block;
     margin: 0.5rem 0;
+    color: #363636; 
   }
   
   input,
@@ -79,9 +82,14 @@ nav ul li a{
     min-height: 2em;
   }
   
-  input, textarea {
-    background-color: #EAFFFF;
+  input, textarea,select{
+    margin: 10px 0 0 0;
+    width: calc(100% - 20px); 
+    min-height: 2em;
+    padding: 10px; 
     border: 1px solid #EAFFFF;
+    border-radius: 5px; 
+    background-color: rgba(234, 255, 255, 0.8); 
     color: #131313;
   }
   .inline {
@@ -92,14 +100,16 @@ nav ul li a{
   
   input[type="submit"] {
     display: block;
-    width: 60%;
+    width: 100%;
     margin: 1em auto;
-    height: 2em;
+    height: 2.5em;
     font-size: 1.1rem;
     background-color: #131313;
-    border-color: white;
-    min-width: 300px;
-    color:#EAFFFF
+    border: none;
+    border-radius: 5px; 
+    color: #EAFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
   }
   
   input[type="file"] {
