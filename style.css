@@ -3,22 +3,20 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-body{
-    width: 1600px;
-    height: 500px;
-}
 .container{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/backg.webp);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/background.webp);
     background-position: center;
     background-size: cover;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
+    
 }
 .navbar{
     height: 12%;
+    padding: 1rem 0;
     display: flex;
     align-items: center; 
 }
@@ -27,9 +25,9 @@ body{
     cursor: pointer;
 }
 .menu-icon{
-    width: 30px;
+    width: 20px;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 nav{
     flex: 1;
@@ -38,7 +36,7 @@ nav{
 nav ul li{
     list-style: none;
     display: inline-block;
-    margin-left: 60px;
+    margin-left: 3%;
 }
 nav ul li a{
     text-decoration: none;
@@ -49,8 +47,10 @@ nav ul li a{
     display: flex;
     height: 88%;
     align-items: center;
+    flex-wrap: wrap;
 }
 .col{
+    flex: 1;
     flex-basis: 50%;
 }
 h1{
@@ -63,6 +63,7 @@ p{
     line-height: 30px;
 }
 button{
+    margin-top: 15px;
     width: 180px;
     color: #000;
     font-size: 12px;
@@ -71,7 +72,6 @@ button{
     border: 0;
     border-radius: 20px;
     outline: none;
-    margin-top: 30px;
 }
 .card{
     width: 200px;
@@ -101,12 +101,118 @@ button{
     transform: translateY(-10px);
     transition: 0.5s;
 }
+h1{
+    font-family: 'Foldit', sans-serif;
+}
 h5{
-    color: #fff;
+    color: wheat;
     text-shadow: 0 0 5px #999;
 }
 .card p{
-    text-shadow: 0 0 5px red;   
-    font-size: 8px;
-    text-decoration: wavy;
+    text-shadow: 5px 5px 5px blue;   
+    font-size: 10px;
+    font-style: oblique;
+    color: wheat;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 80%;
+    }
+
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 120%
+    }
+
+    .navbar {
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .menu-icon {
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    nav ul li {
+        margin-left: 5%;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex: 1;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 10px;
+        line-height: 25px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .card {
+        width: 70%;
+        max-width: 70%;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 30%;
+    }
+    .container {
+        padding-left: 2%;
+        padding-right: 2%;
+        height: 150%
+    }
+    .menu-icon {
+        width: 15px;
+        margin-left: 5px;
+    }
+
+    nav ul li {
+        margin-left: 3%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 9px;
+        line-height: 20px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+    .col {
+        flex: 1;
+        max-width: 50%;
+    }
+    .card {
+        width: 50%;
+        max-width: 50%;
+        height: 120px;
+    }
+
 }
