@@ -77,7 +77,7 @@ button{
     width: 200px;
     height: 240px;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
@@ -98,8 +98,8 @@ button{
     background-image: url(img/image-4.jpeg);
 }
 .card:hover{
-    transform: translateY(-10px);
-    transition: 0.5s;
+    transform: translateY(10px);
+    transition: 0.10s;
 }
 h1{
     font-family: 'Foldit', sans-serif;
