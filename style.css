@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 .container{
     width: 100%;
@@ -116,6 +122,56 @@ h5{
     color: wheat;
 }
 
+.checkout {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.artikulli {
+    float: left;
+    width: calc(33.33% - 40px);
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    text-align: center; /* Center the content */
+}
+
+.artikulli:hover {
+    transform: scale(1.05);
+}
+
+.artikulli img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block; 
+    margin: 0 auto; 
+}
+.artikulli p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #1f1e1e;
+    text-align: left; 
+}
+
+.artikulli a {
+    text-decoration: none; 
+}
+
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
 /* Responsive */
 
 
