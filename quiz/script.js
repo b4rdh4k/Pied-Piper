@@ -108,7 +108,7 @@
         question: "2. Who was the first to betray the group?",
         answers: {
           a: "Ledri Vula",
-          b: "Agon Amigs",
+          b: "Agon Amiga",
           c: "Majk",
           d: "Cozman"
         },
