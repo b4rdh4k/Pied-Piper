@@ -68,8 +68,29 @@
   
       // show number of correct answers out of total
       resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
+    let fanStatus = '';
+    if (numCorrect === 10) {
+        fanStatus = "B-B-B-B-B-B-BS E BON ME ZEMER!";
+    } else if (numCorrect >= 8) {
+        fanStatus = "You're  very Babastars but not the Babastars-iest.";
+    } else if (numCorrect >= 6) {
+        fanStatus = "You're not loyal enough. Do you want people to think you might be TBA/OTR??.";
+    } else if (numCorrect >= 4) {
+        fanStatus = "BOO! You only listen to them on the Prizren-Prishtine bus route.";
+    } else {
+        fanStatus = "Loser. You're not a Babastars fan, you're a fan of the Babastars' fans.";
     }
-  
+
+    //qeto e shtova se po mdel css i ktyne para se mja bo submit!
+    resultsContainer.style.display = 'block';
+    fanStatusContainer.style.display = 'block';
+
+    fanStatusContainer.innerHTML = fanStatus;
+    }
+
+    const fanStatusContainer = document.getElementById('fan-status');
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
