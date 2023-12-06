@@ -110,11 +110,16 @@ button{
     border-radius: 20px;
     outline: none;
 }
+button:hover{
+    background: #360101;
+    color: #fff;
+    transition: 0.5s;
+}
 .card{
     width: 200px;
     height: 240px;
     display: inline-block;
-    border-radius: 30px;
+    border-radius: 50px;
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
@@ -138,21 +143,21 @@ button{
 .card:hover{
     transform: translateY(10px);
     transition: 0.10s;
+    opacity: 0.6;
 }
 h1{
     font-family: 'Foldit', sans-serif;
 }
 h5{
-    color: wheat;
-    text-shadow: 0 0 5px #999;
+    color: #360101;
+    text-shadow: 0 0 5px #dcdbdb;
 }
 .card p{
-    text-shadow: 5px 5px 5px blue;   
+    text-shadow: 5px 5px 5px #dcdbdb;   
     font-size: 10px;
     font-style: oblique;
-    color: wheat;
+    color: #360101;
 }
-
 .checkout {
     color: #fff;
     font-size: 18px;
