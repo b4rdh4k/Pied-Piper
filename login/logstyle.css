@@ -13,7 +13,7 @@ body {
     font-size: 16px;
   }
   /*navbar*/
-  .navbar{
+.navbar{
     height: 12%;
     padding: 1rem 0;
     display: flex;
@@ -75,16 +75,15 @@ nav ul li a{
 /*form*/
   h1, p {
     margin: 1em auto;
-    margin-top: -50px;
     text-align: center;
   }
   p{
-    margin-top: 20px;
+    font-size: smaller;
   }
   
   form {
-    width: 70vw;
-    max-width: 400px;
+    width: 60vw;
+    max-width: 300px;
     margin: 0 auto;
     margin-top: 30px;
     padding: 1em;
@@ -95,7 +94,7 @@ nav ul li a{
   
   fieldset {
     border: none;
-    padding: 2rem 0;
+    padding: 1rem 0;
     border-bottom: 3px solid #EAFFFF;
   }
   
@@ -151,11 +150,4 @@ nav ul li a{
   .inline{
     display: inline; 
     margin-left: 60px;
-  }
-
-  a{
-    color: #131313;
-  }
-  a:hover{
-    color: #fff;
   }
