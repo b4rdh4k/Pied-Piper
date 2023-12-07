@@ -86,7 +86,7 @@ nav ul li a{
     flex-basis: 100%;
 }
 .card{
-    width: 600px;
+    width: 500px;
     height: 540px;
     display: inline-block;
     border-radius: 50px;
