@@ -100,7 +100,8 @@ nav ul li a {
 }
 
 .review-content{
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: bolder;
 }
 .review img {
     width: 0px;
