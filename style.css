@@ -164,12 +164,14 @@ h5{
 @media screen and (max-width: 768px) {
     body {
         font-size: 80%;
+        height: auto;
+        width: auto;
     }
 
     .container {
         padding-left: 5%;
         padding-right: 5%;
-        height: 120%
+        height: auto;
     }
 
     .navbar {
@@ -224,10 +226,15 @@ h5{
     .logo {
         width: 30%;
     }
+    body{
+        font-size: 60%;
+        height: auto;
+        width: auto;
+    }
     .container {
         padding-left: 2%;
         padding-right: 2%;
-        height: 150%
+        height: auto;
     }
     .menu-icon {
         width: 15px;
