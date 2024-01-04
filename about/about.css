@@ -129,7 +129,29 @@ p{
     margin-top: 50px;
     line-height: 30px;
     text-align: center;
+    padding-bottom: 14px;
 }
+
+.footer {
+    padding: 20px 10px;  /* Added padding for better appearance */
+    text-align: center;
+}
+
+.footer a {
+    color: #EAFFFF;
+    text-decoration: none;
+    margin-top: 20px;  /* Adjusted margin for better spacing */
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #EAFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.footer a:hover {
+    background-color: #EAFFFF;
+    color: #1f1e1e;
+}
+
 /*reponsiveee*/
 @media screen and (max-width: 768px) {
     .navbar {
