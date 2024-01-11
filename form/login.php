@@ -1,36 +1,34 @@
 <?php
-
-$host = "localhost";
-$user = "root";
-$password = "";
-$db_name = "logform";
-
-$conn = new mysqli($host, $user, $password, $db_name);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if (isset($_POST['email'])) {
-    $email = $conn->real_escape_string($_POST['email']);
-    $password = $conn->real_escape_string($_POST['password']);
-
-    $sql = "SELECT * FROM loginform WHERE email = '$email' AND password = '$password' LIMIT 1";
-    $result = $conn->query($sql);
-
-    if ($result && $result->num_rows == 1) {
-        echo "You have successfully logged in";
-        exit();
-    } else {
-        echo "You have entered incorrect password";
-        exit();
+    session_start();
+    if(isset($_SESSION["user"])){
+        header("Location: ../index.php");
     }
-}
-
-$conn->close();
-
 ?>
 
+<?php
+    if (isset($_POST["login"])) {
+        $email = $_POST["email"];
+        $password = $_POST["password"];  // Update this line
+        require_once "database.php";
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+        if ($user) {
+            if (password_verify($password, $user["password"])) {
+                session_start();
+                $_SESSION["user"] = "yes";
+                
+                header("Location: ../index.php");
+                die();
+            } else {
+                echo "Password does not match";
+            }
+        } else {
+            echo "Email does not match";
+        }
+    }
+?>
 
 
 <!DOCTYPE html>
@@ -66,12 +64,12 @@ $conn->close();
 
         <h1>Login Form</h1>
         <p>Please fill out this form with the required information</p>
-        <form method="post" action="#">
+        <form action="login.php" method="post">
           <fieldset>
             <label for="email">Email: <input id="email" name="email" type="email" required placeholder="enter your email"/></label>
             <label for="password">Password: <input id="password" name="password" type="password" placeholder="enter password" /></label>
           </fieldset>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" name="login"/>
         </form>
         <script>
             document.addEventListener("DOMContentLoaded", function() {

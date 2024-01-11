@@ -172,3 +172,36 @@ nav ul li a{
   a:hover{
     color: #fff;
   }
+
+  /* Error Styles */
+
+  .error-container {
+    margin-top: 20px;
+    text-align: center;
+}
+.error-container {
+  width: 70vw;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 1em;
+  background-color: rgba(212, 0, 0, 0.5);  
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5); 
+  text-align: center;
+}
+
+.alert {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #dc3545;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alert:hover {
+  background-color: #c82333;
+}
