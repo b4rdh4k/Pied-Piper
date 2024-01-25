@@ -19,16 +19,16 @@
                 <img src="../img/logo.png" class="logo">
                 <nav>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../quiz/quiz.html">Quiz</a></li>
-                        <li><a href="../articles/articles.html">Articles</a></li>
+                        <li><a href="../index.php">Home</a></li>
+                        <li><a href="../quiz/quiz.php">Quiz</a></li>
+                        <li><a href="../articles/articles.php">Articles</a></li>
                     </ul>
                 </nav>
                 <div class="dropdown">
                     <img src="../img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
-                        <a href="../login/login.html">Log In</a>
-                        <a href="../form/form.html">Sign up</a>                    
+                        <a href="../login/login.php">Log In</a>
+                        <a href="../form/form.php">Sign up</a>                    
                     </div>
                 </div>
         </div>

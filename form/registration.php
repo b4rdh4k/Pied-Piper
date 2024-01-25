@@ -102,8 +102,8 @@ if (isset($_POST["submit"])) {
             <div class="dropdown">
                 <img src="../img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="../login/login.html">Log In</a>
-                    <a href="form/form.html">Sign up</a>                    
+                    <a href="login.php">Log In</a>
+                    <a href="registration.php">Sign up</a>                    
                 </div>
             </div>
         </div>
