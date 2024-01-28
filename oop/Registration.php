@@ -42,6 +42,11 @@ $registrationPage = new RegistrationPage($userRegistration);
 
 // Handle registration
 $registrationResult = $registrationPage->handleRegistration();
+
+// Default role for registered users
+$role = 'user'; 
+$user->addUser($username, $password, $role);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
