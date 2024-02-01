@@ -19,20 +19,17 @@
             <nav>
                 <ul>
 
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../quiz/quiz.html">Quiz</a></li>
-                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="../quiz/quiz.php">Quiz</a></li>
+                    <li><a href="articles.php">Articles</a></li>
 
                 </ul>
             </nav>
             <div class="dropdown">
                 <img src="../img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="../login/login.html">Log In</a>
-                    <a href="../form/form.html">Sign up</a>      
-                    
-                   
-                
+                    <a href="../login/login.php">Log In</a>
+                    <a href="../form/form.php">Sign up</a>      
                 </div>
             </div>
       </div>
@@ -41,22 +38,22 @@
     <h2>Featured Artists</h2>
 
         <div class="artist">
-        <a href="../albumsnartists/Mitski/albums.html"><img src="../img/image-1.jpeg" alt="Artist 1"></a>
+        <a href="../albumsnartists/Mitski/albums.php"><img src="../img/image-1.jpeg" alt="Artist 1"></a>
         <p>Mitski</p>
         </div>
 
         <div class="artist">
-        <a href="../albumsnartists/Yung Lean/albums.html"><img src="../img/image-2.jpeg" alt="Artist 2"></a>
+        <a href="../albumsnartists/Yung Lean/albums.php"><img src="../img/image-2.jpeg" alt="Artist 2"></a>
         <p>Yung Lean</p>
         </div>
 
         <div class="artist">
-           <a href="../albumsnartists/The Cranberries/albums.html"><img src="../albumsnartists/img/cranb.jpg" alt="Artist 4"></a> 
+           <a href="../albumsnartists/The Cranberries/albums.php"><img src="../albumsnartists/img/cranb.jpg" alt="Artist 4"></a> 
             <p>The Cranberries</p>
             </div>
 
         <div class="artist">
-        <a href="../albumsnartists/Kanye West/albums.html"><img src="../img/image-4.jpg" alt="Artist 3"></a>
+        <a href="../albumsnartists/Kanye West/albums.php"><img src="../img/image-4.jpg" alt="Artist 3"></a>
         <p>Kanye West</p>
         </div>
 

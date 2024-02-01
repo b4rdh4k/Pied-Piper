@@ -48,9 +48,9 @@
         <img src="../img/logo.png" class="logo">
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../quiz/quiz.html">Quiz</a></li>
-                <li><a href="../articles/articles.html">Articles</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../quiz/quiz.php">Quiz</a></li>
+                <li><a href="../articles/articles.php">Articles</a></li>
             </ul>
         </nav>
         <div class="dropdown">
