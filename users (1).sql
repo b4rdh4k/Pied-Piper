@@ -41,7 +41,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `role`) VALUES
-(1, 'admin', 'admin', 'admin@gmail.com', 'admin', 'admin'),
+(1, 'admin', 'admin', 'admin@gmail.com', 'adminadmin', 'admin'),
 (2, 'bujar', 'dema', 'bujar123@gmail.com', '$2y$10$kIls688Cy/63uiRizeM93uCz9ZjSdVBXz8AXok3t1tYS7sBm4N7wC', 'user'),
 (3, 'bujar', 'bujar', 'bujar@gmail.com', '$2y$10$NZb3r467y7wkgMZl3AN/Uu0Qb6FHrfB6gzfWq1TYUD48Gbg711n6W', 'user'),
 (4, 'bujar', 'dema', 'dea@gmail.com', '$2y$10$Xk3Y5x1pJtfXPAcUJ3aXduAE4gG4xj66Qg99aFYCh65Guc1Br2OJu', 'user'),

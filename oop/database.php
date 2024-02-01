@@ -51,3 +51,4 @@ $conn = $database->getConnection();
 
 // Now $conn holds the database connection, and you can use it for further operations.
 ?>
+p

@@ -43,27 +43,27 @@
 
             <div class="row">
                 <div class="col">
-                    <h1>Welcome to Pied Piper TESTIM NESE O TU PUNU </h1>
+                    <h1>Welcome to Pied Piper</h1>
                     <p>Welcome to our music blog where we, Bardha and Bujar, dive into the beats that move us. 
                         Join us on a journey through our favorite artists and genres, as we share our personal insights that make each note a part of something greater. 
                         It's more than a blog; it's a celebration of the magic of music that fills our hearts with song. 
                         Dive into the rhythm with us at Pied Piper, where every post is a symphony of passion and discovery.</p>
-                  <a href="about/about.html"><button type="button">Read about us</button></a>
+                  <a href="about/about.php"><button type="button">Read about us</button></a>
                 </div>
                 <div class="col">
-                    <a href="../Web-Design-Project/albumsnartists/Mitski/albums.html"><div class="card card1">
+                    <a href="../Web-Design-Project/albumsnartists/Mitski/albums.php"><div class="card card1">
                        <h5>Mitski</h5> 
                        <p>Bardha's pick</p>
                     </div></a>
-                    <a href="../Web-Design-Project/albumsnartists/Yung Lean/albums.html"><div class="card card2">
+                    <a href="../Web-Design-Project/albumsnartists/Yung Lean/albums.php"><div class="card card2">
                         <h5>Yung Lean</h5>
                         <p>Bujar's pick</p>
                      </div></a>
-                     <a href="../Web-Design-Project/albumsnartists/The Cranberries/albums.html"><div class="card card3">
+                     <a href="../Web-Design-Project/albumsnartists/The Cranberries/albums.php"><div class="card card3">
                         <h5>The cranberries</h5> 
                         <p>Bardha's pick</p>
                      </div></a>
-                     <a href="../Web-Design-Project/albumsnartists/Kanye West/albums.html"><div class="card card4">
+                     <a href="../Web-Design-Project/albumsnartists/Kanye West/albums.php"><div class="card card4">
                         <h5>Kanye West</h5>
                         <p>Bujar's pick</p>
                      </div></a>
