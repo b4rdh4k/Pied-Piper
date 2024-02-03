@@ -9,7 +9,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
 	define('DBPASS', '');
 	define('DBDRIVER', '');
 	
-	define('ROOT', 'http://localhost:8008/Pied-Piper/public');
+	define('ROOT', 'http://localhost/Pied-Piper/public');
 
 }else
 {
