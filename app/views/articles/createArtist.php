@@ -8,11 +8,16 @@
 </head>
 <body>
     <form id="artistForm">
+        <h1>Create New Artist</h1>
+        <br>
         <label for="artistName">Artist Name:</label>
         <input type="text" id="artistName" name="artistName" required>
 
         <label for="genre">Genre:</label>
         <input type="text" id="genre" name="genre" required>
+
+        <label for="label">Label:</label>
+        <input type="text" id="label" name="label" required>
 
         <label for="artistImage">Artist Image URL:</label>
         <input type="text" id="artistImage" name="artistImage" required>
@@ -34,6 +39,5 @@
 
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
-    <script src="<?php echo ROOT ?>/assets/js/addArtist.js"></script>
 </body>
 </html>
