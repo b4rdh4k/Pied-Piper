@@ -34,18 +34,20 @@
             </div>
       </div>
 
-    <div class="artists-section">
-        <h2>Featured Artists</h2>
-        <?php foreach($artist as $a) : ?>
-            <div class="artist">
-                <a href="<?= ROOT ?>/artists/viewArtist/<?= $a->id ?>"><img src="<?php echo ROOT ?>/assets/img/<?= $a->artist_image ?>" alt="Artist 1"></a>
-                <p><?= $a->artist_name ?></p>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <br>
+      <div class="artists-section">
+            <h3><a href="<?= ROOT ?>/artists/create">Create</a></h3> <!-- Modified line -->
 
-    <p class="checkout">Check out these articles!</p>
+            <h2>Featured Artists</h2>
+            <?php foreach($artist as $a) : ?>
+                <div class="artist">
+                    <a href="<?= ROOT ?>/artists/viewArtist/<?= $a->id ?>"><img src="<?php echo ROOT ?>/assets/img/<?= $a->artist_image ?>" alt="Artist 1"></a>
+                    <p><?= $a->artist_name ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <br>
+
+        <p class="checkout">Check out these articles!</p>
         <div class="row">
             <?php if (!empty($album_reviews)) : ?>
                 <?php foreach($album_reviews as $alb) : ?>

@@ -7,7 +7,7 @@ class Artists
 {
 	use Controller;
 
-    public function create()
+    public function create($id = null)
     {
         if(!$_SESSION['name'])
         {
