@@ -28,7 +28,7 @@
                     <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
                         <a href="<?php echo ROOT ?>/users/login">Log In</a>
-                        <a href="users/signup.php">Sign up</a>    
+                        <a href="<?php echo ROOT ?>/users/signup.php">Sign up</a>    
                         <a href="<?php echo ROOT ?>/users/logout">Log out</a>                
                     </div>
                 </div>

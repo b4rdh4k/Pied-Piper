@@ -17,20 +17,20 @@
         <input type="text" id="album_title" name="album_title" required>
         
         <label for="rating">Rating:</label>
-        <input type="text" id="rating" name="brief_review" required>
+        <input type="text" id="rating" name="rating" required>
 
         <label for="brief_review">Brief Review:</label>
-        <textarea id="review" name="brief_review" required></textarea>
+        <textarea id="brief_review" name="brief_review" required></textarea>
 
         <label for="detailed_review">Detailed Review:</label>
-        <textarea id="review" name="detailed_review" required></textarea>
+        <textarea id="detailed_review" name="detailed_review" required></textarea>
 
 
         <label for="genre">Genre:</label>
-        <input type="text" id="review" name="genre" required>
+        <input type="text" id="genre" name="genre" required>
 
         <label for="date_reviewed">Date Reviewed:</label>
-        <input type="text" id="review" name="date_reviewed" required>
+        <input type="text" id="date_reviewed" name="date_reviewed" required>
         
         <label for="albumimage">Album Image URL:</label>
         <input type="text" id="albumimage" name="albumimage" required>

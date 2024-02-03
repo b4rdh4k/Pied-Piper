@@ -14,7 +14,7 @@ class Albums
             header('location: users/logIn');
         }
 
-        if(isset($_POST['album_title']))
+        if(isset($_POST['artist']))
         {
             $data = [
                 'artist' => $_POST['artist'],

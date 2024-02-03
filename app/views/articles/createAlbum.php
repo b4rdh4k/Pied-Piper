@@ -22,7 +22,7 @@
         <textarea id="brief_review" name="brief_review" required></textarea>
 
         <label for="detailed_review">Detailed Review:</label>
-        <textarea id="bried_review" name="detailed_review" required></textarea>
+        <textarea id="detailed_review" name="detailed_review" required></textarea>
 
 
         <label for="genre">Genre:</label>
