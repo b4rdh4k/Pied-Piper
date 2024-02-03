@@ -20,7 +20,7 @@
                 <nav>
                     <ul>
                         <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
-                        <li><a href="../app/views/quiz.php">Quiz</a></li>
+                        <li><a href="<?php echo ROOT?>/users">Quiz</a></li>
                         <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
                     </ul>
                 </nav>
@@ -44,22 +44,12 @@
                   <a href="about.php"><button type="button">Read about us</button></a>
                 </div>
                 <div class="col">
-                    <a href="../Web-Design-Project/albumsnartists/Mitski/albums.html"><div class="card card1">
-                       <h5>Mitski</h5> 
-                       <p>Bardha's pick</p>
+                    <?php foreach($handpicked as $h) : ?>
+                    <a href="<?= ROOT.'/artists/viewArtist/'.$h->id ?>"><div class="card card1">
+                       <h5><?= $h->artist_name ?></h5> 
+                       <p>Our pick</p>
                     </div></a>
-                    <a href="../Web-Design-Project/albumsnartists/Yung Lean/albums.html"><div class="card card2">
-                        <h5>Yung Lean</h5>
-                        <p>Bujar's pick</p>
-                     </div></a>
-                     <a href="../Web-Design-Project/albumsnartists/The Cranberries/albums.html"><div class="card card3">
-                        <h5>The cranberries</h5> 
-                        <p>Bardha's pick</p>
-                     </div></a>
-                     <a href="../Web-Design-Project/albumsnartists/Kanye West/albums.html"><div class="card card4">
-                        <h5>Kanye West</h5>
-                        <p>Bujar's pick</p>
-                     </div></a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

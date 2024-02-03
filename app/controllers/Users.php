@@ -38,11 +38,12 @@ class Users
                 $_SESSION['name'] = $result->firstname;
                 $_SESSION['lastname'] = $result->lastname;
                 $_SESSION['email'] = $email;
+                $_SESSION['group'] = $result->grouptype;
 
                 header('location: ../home');
             }else{
-                //you are not logged in
-                echo "<pre>";print_r('GABIM DIE FOOL!');die;
+                header('location: logIn');
+                exit;
             }
             
         }

@@ -15,4 +15,5 @@ class Albums_model
 	// 	'email',
 	// 	'password',
 	// ];
+	
 }

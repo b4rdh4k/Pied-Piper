@@ -7,7 +7,7 @@ class Albums
 {
 	use Controller;
 
-    public function create()
+    public function create($id = null)
     {
         if(!$_SESSION['name'])
         {
@@ -45,7 +45,8 @@ class Albums
         }
 
         $album_model = new Albums_model;
-        $data['artist'] = $album_model->first(['id' => $id]);
+        $data['album_reviews'] = $album_model->first(['id' => $id]);
+      //  print_r($data);die;
         $this->view('articles/albumview', $data);
     }
 

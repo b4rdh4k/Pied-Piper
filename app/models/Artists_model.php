@@ -15,4 +15,10 @@ class Artists_model
 	// 	'email',
 	// 	'password',
 	// ];
+
+	public function get_4_artists()
+	{
+		$sql = "SELECT * FROM artist LIMIT 4";
+		return $this->query($sql);
+	}
 }

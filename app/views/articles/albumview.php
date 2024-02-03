@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pied Piper - Articles</title>
-    <link rel="stylesheet" href="albums.css">
+    <link rel="stylesheet" href="<?php echo ROOT ?>/assets/css/albums.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -15,19 +15,17 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="../../img/logo.png" class="logo">
+            <img src="<?php echo ROOT ?>/assets/img/logo.png" class="logo">
             <nav>
                 <ul>
-                    <li><a href="../../index.php">Home</a></li>
-                    <li><a href="../../quiz/quiz.php">Quiz</a></li>
-                    <li><a href="../../articles/articles.php">Articles</a></li>
+                    <li><a href="<?php echo ROOT ?>/home">Home</a></li>
+                    <li><a href="<?php echo ROOT ?>/articles">Articles</a></li>
                 </ul>
             </nav>
             <div class="dropdown">
-                <img src="../img/menu.png" class="menu-icon" alt="drop-down menu">
+                <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="../../login/login.php">Log In</a>
-                    <a href="../../form/form.php">Sign up</a>      
+                    <a href="<?php echo ROOT ?>/users/logIn">Log In</a>      
                 </div>
             </div>
         </div>
@@ -36,17 +34,18 @@
             
             <div class="album-review">
                 <div class="review-header">
-                    <img src="../img/808s_&_Heartbreak.png" alt="Album Cover" class="album-cover">
+                <img src="<?= ROOT ?>/assets/img/<?= $album_reviews->albumimage ?>" alt="Album Cover" class="album-cover">
                     <div class="info">
-                        <h2>Kanye West</h2>
-                        <h3>808s & Heartbreak</h3>
-                        <p class="rating">Rating: 5/5</p>
+                    <p><?= $album_reviews->artist ?></p>
+                        <h3><?= $album_reviews->album_title ?></h3>
+                        <p><?= $album_reviews->rating ?></p>
                     </div>
                 </div>
         
                 
                 <div class="review-content">
-                    <p>A Pioneering Journey into Emotional Landscapes - "808s & Heartbreak"...</p>
+                <p><?= $album_reviews->brief_review ?></p>
+                    
                     
                 </div>
             </div>
@@ -54,37 +53,15 @@
             <div class="detailed-review">
 
                 <div class="additional-info">
-                    <p>Genre: Experimental Emo Rap</p>
-                    <p>Date Reviewed: December 12, 2023</p>
-                    <p>Label: Roc-A-Fella Records
-                    </p>
+                <p>Genre: <?= $album_reviews->genre ?></p>
+                    <p>Date Reviewed: <?= $album_reviews->date_reviewed ?></p>
+                    <p>Label: <?= $album_reviews->label ?>
                 </div>
 
                 <h2>Review</h2>
 
                 <div class="starz-review">
-                    <p>Kanye West's "808s & Heartbreak," released in 2008, stands as a groundbreaking and emotionally charged exploration of
-                         heartache and vulnerability. Departing from his earlier rap-centric style, 
-                         Kanye delves into the realms of auto-tuned melodies, minimalist production,
-                         and poignant lyricism to create an album that transcends genre boundaries.
-                         The album's title itself, "808s & Heartbreak," alludes to the heavy reliance on the Roland TR-808 drum machine,
-                          a symbol of the raw and emotive soundscapes that Kanye aspires to convey. From the haunting opening track "Say You Will,"
-                          the listener is immediately immersed in a sonic landscape marked by melancholy and solitude.
-                    </p>
-                    <br>
-                    <p>"808s & Heartbreak" has left an indelible mark on the music industry, influencing a generation of artists who would go on
-                         to embrace vulnerability and emotion in their work. The album's impact extends beyond its initial release, as its innovative
-                          use of auto-tune and its exploration of personal pain continue to resonate in contemporary music. 
-                        The emotional depth of "808s & Heartbreak" is further amplified by tracks like "Love Lockdown" and "Coldest Winter." 
-                        Kanye's vulnerability shines through as he navigates themes of heartbreak, isolation, and introspection. 
-                        The album's sonic palette, characterized by stripped-down arrangements and haunting melodies,
-                         adds a layer of authenticity to the emotional journey it embarks upon.
-                         In conclusion, "808s & Heartbreak" stands as a pivotal moment in Kanye West's artistic evolution, marking a departure from 
-                         conventional hip-hop and embracing a more experimental and emotionally charged sound.
-                          Its influence reverberates through the years, cementing its place as a timeless and essential piece in the mosaic of modern music.</p>
-                </div>
-                
-                
+                <p><?= $album_reviews->detailed_review ?></p>
             </div>
             <div id="kontenti">
                 <header>

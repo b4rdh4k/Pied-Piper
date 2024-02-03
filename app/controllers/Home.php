@@ -11,7 +11,9 @@ class Home
 	{
 		if(isset($_SESSION['email']))
 		{
-			$this->view('ballina');
+			$artist_model = new Artists_model;
+			$data['handpicked'] = $artist_model->get_4_artists();
+			$this->view('ballina', $data);
 		}else{
 			header('location: users/logIn');
 		}
