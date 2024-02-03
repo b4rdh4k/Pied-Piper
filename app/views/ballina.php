@@ -19,17 +19,17 @@
                 <img src="<?php echo ROOT ?>/assets/img/logo.png" class="logo">
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="quiz.php">Quiz</a></li>
+                        <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
+                        <li><a href="../app/views/quiz.php">Quiz</a></li>
                         <li><a href="articles">Articles</a></li>
                     </ul>
                 </nav>
                 <div class="dropdown">
                     <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
-                        <a href="users/logIn.php">Log In</a>
+                        <a href="<?php echo ROOT ?>/users/login">Log In</a>
                         <a href="users/signup.php">Sign up</a>    
-                        <a href="users/logout">Log out</a>                
+                        <a href="<?php echo ROOT ?>/users/logout">Log out</a>                
                     </div>
                 </div>
             </div>
