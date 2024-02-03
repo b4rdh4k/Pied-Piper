@@ -42,8 +42,10 @@
                 
                 <div class="review-content">
                     <p><?= $artist->artist_name ?></p>
-                    <h3><a href="<?= ROOT ?>/artists/edit/<?= $artist->id ?>">EDIT</a></h3>
-                    <h3><a href="<?= ROOT ?>/artists/delete/<?= $artist->id ?>">DELETE</a></h3>
+                    <a href="<?= ROOT ?>/artists/edit/<?= $artist->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
+    box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">EDIT</button></a>
+                    <a href="<?= ROOT ?>/artists/delete/<?= $artist->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
+    box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">DELETE</button></a>
                 </div>
             </div>
             

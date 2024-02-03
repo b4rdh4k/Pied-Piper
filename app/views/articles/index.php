@@ -35,8 +35,6 @@
       </div>
 
       <div class="artists-section">
-            <h3><a href="<?= ROOT ?>/artists/create">Create</a></h3> <!-- Modified line -->
-
             <h2>Featured Artists</h2>
             <?php foreach($artist as $a) : ?>
                 <div class="artist">
@@ -44,6 +42,8 @@
                     <p><?= $a->artist_name ?></p>
                 </div>
             <?php endforeach; ?>
+            <a href="<?= ROOT ?>/artists/create"><button style="color:beige;width: fit-content; border-radius: 10px;background-color: rgba(36, 0, 70, 0.2); padding: 10px;
+    box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">ADD ARTIST</button></a>
         </div>
         <br>
 

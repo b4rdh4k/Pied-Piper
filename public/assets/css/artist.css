@@ -221,7 +221,6 @@ button::after {
     transform: translate(-50%, -50%);
     width: 20px; 
     height: 20px; 
-    background-image: url('path/to/your/arrow-image.png'); 
     background-size: cover;
     background-repeat: no-repeat;
 }
