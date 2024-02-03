@@ -36,7 +36,7 @@
 
     <div class="artists-section">
         <h2>Featured Artists</h2>
-        <?php foreach($artists as $a) : ?>
+        <?php foreach($artist as $a) : ?>
             <div class="artist">
                 <a href="../albumsnartists/Mitski/albums.php"><img src="<?php echo ROOT ?>/assets/img/<?= $a->artist_image ?>" alt="Artist 1"></a>
                 <p><?= $a->artist_name ?></p>

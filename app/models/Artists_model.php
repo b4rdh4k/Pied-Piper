@@ -9,7 +9,7 @@ class Artists_model
 	
 	use Model;
 
-	protected $table = 'artists';
+	protected $table = 'artist';
 
 	// protected $allowedColumns = [
 	// 	'email',
