@@ -19,15 +19,15 @@
             <img src="/public/assets/foto/logo.png" class="logo">
             <nav>
                 <ul>
-                    <li><a href="ballina.php">Home</a></li>
+                    <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                     <li><a href="">Quiz</a></li>
-                    <li><a href="articles/articles.php">Articles</a></li>
+                    <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
                 </ul>
             </nav>
             <div class="dropdown">
                 <img src="/public/assets/foto/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="users/logIn.php">Log In</a>
+                    <a href="<?php echo ROOT ?>/users/login">Log In</a>
                     <a href="users/signup.php">Sign up</a>                    
                 </div>
             </div>

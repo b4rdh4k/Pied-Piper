@@ -19,7 +19,7 @@
                 <img src="/public/assets/img/logo.png" class="logo">
                 <nav>
                     <ul>
-                        <li><a href="ballina.php">Home</a></li>
+                        <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                         <li><a href="quiz.php">Quiz</a></li>
                         <li><a href="articles/index.php">Articles</a></li>
                     </ul>
