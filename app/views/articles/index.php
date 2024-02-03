@@ -20,8 +20,8 @@
                 <ul>
 
                     <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
-                    <li><a href="../quiz.php">Quiz</a></li>
-                    <li><a href="">Articles</a></li>
+                    <li><a href="<?= ROOT ?>/app/quiz.php">Quiz</a></li>
+                    <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
 
                 </ul>
             </nav>
@@ -52,7 +52,7 @@
             <?php if (!empty($album_reviews)) : ?>
                 <?php foreach($album_reviews as $alb) : ?>
                     <div class="artikulli">
-                        <a href="../albumsnartists/albums.html"><img src="<?php echo ROOT ?>/assets/img/<?= $alb->albumimage ?>" alt="Album 1">
+                        <a href=""><img src="<?php echo ROOT ?>/assets/img/<?= $alb->albumimage ?>" alt="Album 1">
                             <p><?= $alb->artist ?>:
                             <?=  $alb->album_title ?><p>
                         </a>
