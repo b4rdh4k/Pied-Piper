@@ -7,11 +7,11 @@ class Articles
     public function index()
     {
         $artist_model = new Artists_model;
-        $data['artists'] = $artist_model->findAll();
-        $this->view('articles/index', $data);
-
         $album_model = new Albums_model;
+
+        $data['artists'] = $artist_model->findAll();
         $data['album_reviews'] = $album_model->findAll();
+
         $this->view('articles/index', $data);
     }
 }
