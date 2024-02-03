@@ -128,19 +128,6 @@ button:hover{
   background-position: center;
   background-size: cover;
 }
-
-.card1{
-  background-image: url(img/image-1.jpeg);
-}
-.card2{
-  background-image: url(img/image-2.jpeg);
-}
-.card3{
-  background-image: url(../Web-Design-Project/albumsnartists/img/cranb.jpg);
-}
-.card4{
-  background-image: url(img/image-4.jpg);
-}
 .card:hover{
   transform: translateY(10px);
   transition: 0.10s;
