@@ -27,7 +27,7 @@ Trait Model
 		$keys_not = array_keys($data_not);
 		$query = "select * from $this->table where ";
 
-		foreach ($data as $key) {
+		foreach ($keys as $key) {
 			$query .= $key . " = :". $key . " && ";
 		}
 
