@@ -51,7 +51,7 @@
                 <div class="col">
                     <?php foreach($handpicked as $h) : ?>
                     <a href="<?= ROOT.'/artists/viewArtist/'.$h->id ?>"><div class="card card1">
-                        <img class="card" src="<?= ROOT ?>/assets/img/<?= $h->artist_image ?>" alt="Artist 1">
+                        <img class="card" style="width: 200px;height: 240px;" src="<?= ROOT ?>/assets/img/<?= $h->artist_image ?>" alt="Artist 1">
                     </div></a>
                     <?php endforeach; ?>
                 </div>
