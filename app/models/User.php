@@ -15,8 +15,8 @@ class User
 
 		'email',
 		'password',
+		'grouptype'
 	];
-
 	public function validate($data)
 	{
 		$this->errors = [];

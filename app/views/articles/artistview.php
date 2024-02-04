@@ -44,10 +44,16 @@
                 
                 <div class="review-content">
                     <p><?= $artist->artist_name ?></p>
+                    
+                    <?php if(isset($_SESSION['grouptype']) && $_SESSION['grouptype'] == 0) : ?>
                     <a href="<?= ROOT ?>/artists/edit/<?= $artist->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
     box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">EDIT</button></a>
+                    <?php endif; ?>
+
+                    <?php if(isset($_SESSION['grouptype']) && $_SESSION['grouptype'] == 0) : ?>
                     <a href="<?= ROOT ?>/artists/delete/<?= $artist->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
-    box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">DELETE</button></a>
+                    box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">DELETE</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
             

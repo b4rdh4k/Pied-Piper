@@ -19,6 +19,6 @@
           </fieldset>
           <input type="submit" value="Submit" />
         </form>
-  <script src="/public/assets/js/kycu.js"></script>
+  <script src="/public/assets/js/logIn.js"></script>
 </body>
 </html>

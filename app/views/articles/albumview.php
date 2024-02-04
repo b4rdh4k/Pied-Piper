@@ -49,10 +49,12 @@
                 <div class="review-content">
                 <p><?= $album_reviews->brief_review ?></p>
                 <div>
+                <?php if(isset($_SESSION['grouptype']) && $_SESSION['grouptype'] == 0) : ?>
                 <a href="<?= ROOT ?>/albums/edit/<?= $album_reviews->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
     box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">EDIT</button></a>
                     <a href="<?= ROOT ?>/albums/delete/<?= $album_reviews->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
     box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">DELETE</button></a>
+    <?php endif; ?>
                 </div>
                     
                 </div>

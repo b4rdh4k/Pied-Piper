@@ -22,9 +22,12 @@
                     <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                     <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
                     <li><a href="">Articles</a></li>
+                    <?php if($_SESSION['grouptype'] == 0) : ?>
                     <li><a href="<?php echo ROOT ?>/users">Users</a></li>
+                    <?php endif; ?>
+                    <?php if($_SESSION['grouptype'] == 1) : ?>
                     <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
-
+                    <?php endif; ?>
                 </ul>
             </nav>
             <div class="dropdown">
@@ -61,7 +64,7 @@ s                            <p><?= $alb->artist ?>:
                         </a>
                     </div>
                 <?php endforeach; ?>
-            <?php if($_SESSION['grouptype'] == 0) : ?>
+                <?php if(isset($_SESSION['grouptype']) && $_SESSION['grouptype'] == 0) : ?>
                 <a href="<?= ROOT ?>/albums/create"><button style="color:beige;width: fit-content; border-radius: 10px;background-color: rgba(36, 0, 70, 0.2); padding: 10px;
         box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">ADD ALBUM</button></a>
             <?php endif; ?>

@@ -8,6 +8,7 @@ class Users
     {
         $this->view('users');
     }
+    
 
     public function logIn()
     {
@@ -35,10 +36,10 @@ class Users
             if($result == true)
             {
                 //you are logged in
+                $_SESSION['grouptype'] = $result->grouptype;
                 $_SESSION['name'] = $result->firstname;
                 $_SESSION['lastname'] = $result->lastname;
                 $_SESSION['email'] = $email;
-                $_SESSION['group'] = $result->grouptype;
                 header('location: ../home');
             }else{
                 header('location: logIn');
@@ -55,4 +56,5 @@ class Users
         
         header('location: logIn');
     }
+    
 }

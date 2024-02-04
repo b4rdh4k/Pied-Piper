@@ -46,7 +46,6 @@ class Albums
 
         $album_model = new Albums_model;
         $data['album_reviews'] = $album_model->first(['id' => $id]);
-      //  print_r($data);die;
         $this->view('articles/albumview', $data);
     }
 
