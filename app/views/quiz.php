@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatibile" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/public/assets/css/quiz.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/quiz.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="/public/assets/foto/logo.png" class="logo">
+            <img src="<?php echo ROOT ?>/assets/img/logo.png" class="logo">
             <nav>
                 <ul>
                     <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
@@ -25,10 +25,10 @@
                 </ul>
             </nav>
             <div class="dropdown">
-                <img src="/public/assets/foto/menu.png" class="menu-icon" alt="drop-down menu">
+                <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
                     <a href="<?php echo ROOT ?>/users/login">Log In</a>
-                    <a href="users/signup.php">Sign up</a>                    
+                    <a href="<?php echo ROOT ?>users/signup">Sign up</a>                    
                 </div>
             </div>
       </div>
@@ -42,6 +42,6 @@
         <div id="fan-status"></div>
         <div id="results"></div>
     </div>
-    <script src="/public/assets/js/quiz.js"></script>
+    <script src="<?php echo ROOT ?>/assets/js/quiz.js"></script>
 </body>
 </html>

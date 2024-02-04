@@ -20,7 +20,7 @@
                 <nav>
                     <ul>
                         <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
-                        <li><a href="<?php echo ROOT?>/users">Quiz</a></li>
+                        <li><a href="<?php echo ROOT?>/quiz">Quiz</a></li>
                         <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
                     </ul>
                 </nav>
