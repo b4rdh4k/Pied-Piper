@@ -22,14 +22,14 @@
                         <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                         <li><a href="<?php echo ROOT?>/quiz">Quiz</a></li>
                         <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
+                        <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="dropdown">
                     <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
                         <a href="<?php echo ROOT ?>/users/login">Log In</a>
-                        <a href="<?php echo ROOT ?>/users/signup">Sign up</a>    
-                        <a href="<?php echo ROOT ?>/users/logout">Log out</a>                
+                        <a href="<?php echo ROOT ?>/users/logout">Log out</a>             
                     </div>
                 </div>
             </div>
@@ -46,8 +46,7 @@
                 <div class="col">
                     <?php foreach($handpicked as $h) : ?>
                     <a href="<?= ROOT.'/artists/viewArtist/'.$h->id ?>"><div class="card card1">
-                       <h5><?= $h->artist_name ?></h5> 
-                       <p>Our pick</p>
+                        <img class="card" src="<?= ROOT ?>/assets/img/<?= $h->artist_image ?>" alt="Artist 1">
                     </div></a>
                     <?php endforeach; ?>
                 </div>

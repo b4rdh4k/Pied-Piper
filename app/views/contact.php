@@ -10,25 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div class="navbar">
-        <img src="/public/assets/foto/logo.png" class="logo">
-        <nav>
-            <ul>
-                <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
-                <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
-                <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
-            </ul>
-        </nav>
-        <div class="dropdown">
-            <img src="../img/menu.png" class="menu-icon" alt="drop-down menu">
-                <div class="dropdown-content">
-                    <a href="users/logIn.php">Log In</a>
-                    <a href="users/signup.php">Sign up</a>                    
-                </div>
-        </div>
-    </div>
-
     <h1>Contact Us</h1>
     <p>Feel free to reach out to us using the form below:</p>
     <form method="post" action="" id="contactForm">

@@ -18,16 +18,18 @@
             <img src="<?= ROOT ?>/assets/img/logo.png" class="logo">
             <nav>
                 <ul>
-                    <li><a href="../../index.php">Home</a></li>
-                    <li><a href="../../quiz/quiz.php">Quiz</a></li>
-                    <li><a href="../../articles/articles.php">Articles</a></li>
+                    <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
+                    <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
+                    <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
+                    <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="dropdown">
                 <img src="<?= ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="../../login/login.php">Log In</a>
-                    <a href="../../form/form.php">Sign up</a>      
+                    <a href="<?php echo ROOT ?>/users/logIn">Log In</a>
+                    <a href="<?php echo ROOT ?>/users/logout">Log out</a>
+                      
                 </div>
             </div>
         </div>

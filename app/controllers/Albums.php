@@ -69,7 +69,7 @@ class Albums
         }
 
         $album_model = new Albums_model;
-        $data['album'] = $album_model->first(['id' => $id]);
+        $data['album_reviews'] = $album_model->first(['id' => $id]);
         if(isset($_POST['album_title']))
         {
             $data = [

@@ -22,13 +22,14 @@
                         <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                         <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
                         <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
+                        <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="dropdown">
                     <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
                         <a href="<?php echo ROOT ?>/users/logIn">Log In</a>
-                        <a href="<?php echo ROOT ?>/users/signup">Sign up</a>                    
+                        <a href="<?php echo ROOT ?>/users/logout">Log out</a>                     
                     </div>
                 </div>
         </div>
@@ -51,12 +52,6 @@
         </div>
     <?php endforeach; ?>
 </div>
-
-             <a href="<?php echo ROOT ?>/contact">Contact Us</a>
-        </div>
-        <div class="footer">
-            <p>© 2023 Pied Piper</p>
-        </div>
         </div>
     </body>
 </html>

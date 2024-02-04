@@ -48,11 +48,11 @@ class Users
         }
         $this->view('users/logIn');
     }
-    public function signup(){
-        
-    }
     public function logout(){
+        session_start();
+
         session_destroy();
+        
         header('location: logIn');
     }
 }

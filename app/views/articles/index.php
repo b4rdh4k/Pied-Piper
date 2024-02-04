@@ -20,9 +20,10 @@
                 <ul>
 
                     <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
-                    <li><a href="../quiz.php">Quiz</a></li>
+                    <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
                     <li><a href="">Articles</a></li>
                     <li><a href="<?php echo ROOT ?>/users">Users</a></li>
+                    <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
 
                 </ul>
             </nav>
@@ -30,7 +31,7 @@
                 <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
                     <a href="<?php echo ROOT ?>/users/login">Log In</a>
-                    <a href="<?php echo ROOT ?>/assets/img/menu.png">Sign up</a>      
+                    <a href="<?php echo ROOT ?>/users/logout">Log out</a>    
                 </div>
             </div>
       </div>
@@ -52,18 +53,14 @@
 
         <p class="checkout">Check out these articles!</p>
         <div class="row">
-            <?php if (!empty($album_reviews)) : ?>
                 <?php foreach($album_reviews as $alb) : ?>
                     <div class="artikulli">
-                        <a href="<?= ROOT ?>/albums/viewAlbum/<?= $a->id ?>"><img src="<?php echo ROOT ?>/assets/img/<?= $alb->albumimage ?>" alt="Album 1">
+                        <a href="<?= ROOT ?>/albums/viewAlbum/<?= $alb->id ?>"><img src="<?php echo ROOT ?>/assets/img/<?= $alb->albumimage ?>" alt="Album 1">
 s                            <p><?= $alb->artist ?>:
                             <?=  $alb->album_title ?><p>
                         </a>
                     </div>
                 <?php endforeach; ?>
-            <?php else : ?>
-                <p>No album reviews available.</p>
-            <?php endif; ?>
             <?php if($_SESSION['grouptype'] == 0) : ?>
                 <a href="<?= ROOT ?>/albums/create"><button style="color:beige;width: fit-content; border-radius: 10px;background-color: rgba(36, 0, 70, 0.2); padding: 10px;
         box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">ADD ALBUM</button></a>

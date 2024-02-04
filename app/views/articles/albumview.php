@@ -20,12 +20,15 @@
                 <ul>
                     <li><a href="<?php echo ROOT ?>/home">Home</a></li>
                     <li><a href="<?php echo ROOT ?>/articles">Articles</a></li>
+                    <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
+                    <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="dropdown">
                 <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="<?php echo ROOT ?>/users/logIn">Log In</a>      
+                    <a href="<?php echo ROOT ?>/users/logIn">Log In</a> 
+                    <a href="<?php echo ROOT ?>/users/logout">Log out</a>     
                 </div>
             </div>
         </div>
@@ -45,10 +48,12 @@
                 
                 <div class="review-content">
                 <p><?= $album_reviews->brief_review ?></p>
+                <div>
                 <a href="<?= ROOT ?>/albums/edit/<?= $album_reviews->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
     box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">EDIT</button></a>
                     <a href="<?= ROOT ?>/albums/delete/<?= $album_reviews->id ?>"><button style="color:beige;width: fit-content; border-radius: 2px;background-color: rgba(36, 0, 70, 0.2); padding: 5px;
     box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);">DELETE</button></a>
+                </div>
                     
                 </div>
             </div>
@@ -65,14 +70,7 @@
 
                 <div class="starz-review">
                 <p><?= $album_reviews->detailed_review ?></p>
-            </div>
-            <div id="kontenti">
-                <header>
-                <img id="slideshow" />
-                </header>
-                <button onclick="changeImg()">Next</button>
-            </div>
-        
+            </div> 
         </div>
         </div>
     </div>

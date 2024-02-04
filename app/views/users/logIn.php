@@ -10,25 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="navbar">
-        <img src="/public/assets/foto/logo.png" class="logo">
-        <nav>
-            <ul>
-                <li><a href="../ballina.php">Home</a></li>
-                <li><a href="../quiz.php">Quiz</a></li>
-                <li><a href="../articles/index.php">Articles</a></li>
-            </ul>
-        </nav>
-        <div class="dropdown">
-            <img src="/public/assets/foto/menu.png" class="menu-icon" alt="drop-down menu">
-            <div class="dropdown-content">
-                <a href="">Log In</a>
-                <a href="signup.php">Sign up</a>                    
-            </div>
-        </div>
-  </div>
-
         <h1>Login Form</h1>
         <p>Please fill out this form with the required information</p>
         <form method="post">
