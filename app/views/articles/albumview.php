@@ -21,7 +21,12 @@
                     <li><a href="<?php echo ROOT ?>/home">Home</a></li>
                     <li><a href="<?php echo ROOT ?>/articles">Articles</a></li>
                     <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
-                    <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
+                    <?php if($_SESSION['grouptype'] == 0) : ?>
+                        <li><a href="<?php echo ROOT ?>/userview">Users</a></li>
+                    <?php endif; ?>
+                    <?php if($_SESSION['grouptype'] == 1) : ?>
+                        <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
             <div class="dropdown">

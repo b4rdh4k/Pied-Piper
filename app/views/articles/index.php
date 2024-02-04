@@ -23,7 +23,7 @@
                     <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
                     <li><a href="">Articles</a></li>
                     <?php if($_SESSION['grouptype'] == 0) : ?>
-                    <li><a href="<?php echo ROOT ?>/users">Users</a></li>
+                    <li><a href="<?php echo ROOT ?>/userview">Users</a></li>
                     <?php endif; ?>
                     <?php if($_SESSION['grouptype'] == 1) : ?>
                     <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
