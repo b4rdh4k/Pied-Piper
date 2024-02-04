@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Foldit&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <bodyye>
         <div class="container">
             <div class="navbar">
                 <img src="<?php echo ROOT ?>/assets/img/logo.png" class="logo">
@@ -28,7 +28,7 @@
                     <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
                         <a href="<?php echo ROOT ?>/users/login">Log In</a>
-                        <a href="<?php echo ROOT ?>/users/signup.php">Sign up</a>    
+                        <a href="<?php echo ROOT ?>/users/signup">Sign up</a>    
                         <a href="<?php echo ROOT ?>/users/logout">Log out</a>                
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                         Join us on a journey through our favorite artists and genres, as we share our personal insights that make each note a part of something greater. 
                         It's more than a blog; it's a celebration of the magic of music that fills our hearts with song. 
                         Dive into the rhythm with us at Pied Piper, where every post is a symphony of passion and discovery.</p>
-                  <a href="about.php"><button type="button">Read about us</button></a>
+                  <a href="<?php echo ROOT ?>/about"><button type="button">Read about us</button></a>
                 </div>
                 <div class="col">
                     <?php foreach($handpicked as $h) : ?>

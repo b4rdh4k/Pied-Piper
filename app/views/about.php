@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pied Piper</title>
-        <link rel="stylesheet" href="/public/assets/css/about.css">
+        <link rel="stylesheet" href="<?php echo ROOT?>/assets/css/about.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -16,45 +16,43 @@
     <body>
         <div class="container">
             <div class="navbar">
-                <img src="/public/assets/img/logo.png" class="logo">
+                <img src="<?php echo ROOT ?>/assets/img/logo.png" class="logo">
                 <nav>
                     <ul>
                         <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
-                        <li><a href="quiz.php">Quiz</a></li>
-                        <li><a href="articles/index.php">Articles</a></li>
+                        <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
+                        <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
                     </ul>
                 </nav>
                 <div class="dropdown">
-                    <img src="../img/menu.png" class="menu-icon" alt="drop-down menu">
+                    <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                     <div class="dropdown-content">
-                        <a href="users/logIN.php">Log In</a>
-                        <a href="users/signup.php">Sign up</a>                    
+                        <a href="<?php echo ROOT ?>/users/logIn">Log In</a>
+                        <a href="<?php echo ROOT ?>/users/signup">Sign up</a>                    
                     </div>
                 </div>
         </div>
         
         <div class="col">
-            <div class="card">
-                <h2>Bardha Kryeziu</h2>
-            <p><strong>Title/Role:</strong>Student<br>
-                <strong>Introduction:</strong> Hello there, I'm Bardha, a student at UBT. With a knack for Computer Science, I am committed to making it in the industry.<br>
-                <strong>Background:</strong> Originally from Prizren, I bring 1 year of experience in this field. My journey in Front End began in 2020 with a certification as a Front-End Developer from Digital School of Kosova.<br>
-                <strong>Mission:</strong> With Pied Piper, our mission was to make a simple website that meets the criteria and is also fun. I strongly believe in work with excitement, and it shapes my every endeavor.<br>
-                <strong>What Sets Us Apart:</strong> What makes us unique is our care free, yet planned approach. We take pride in our ability to research and figuring things out.<br>
-                <strong>Passions:</strong> Beyond tech, my heart beats for binge watching. In my downtime, you'll catch me watching sitcoms.
+    <?php
+    
+    foreach ($data['about'] as $aboutItem) :
+    ?>
+        <div class="card">
+            <h2><?= $aboutItem->name ?></h2>
+            <p>
+                <strong>Title/Role:</strong> <?= $aboutItem->title_role ?><br>
+                <strong>Introduction:</strong> <?= $aboutItem->introduction ?><br>
+                <strong>Background:</strong> <?= $aboutItem->background ?><br>
+                <strong>Mission:</strong> <?= $aboutItem->mission ?><br>
+                <strong>What Sets Us Apart:</strong> <?= $aboutItem->sets_apart ?><br>
+                <strong>Passions:</strong> <?= $aboutItem->passions ?>
             </p>
-            </div>
-            <div class="card">
-                <h2>Bujar Dema</h2>
-            <p><strong>Title/Role:</strong>Student<br>
-                <strong>Introduction:</strong> Hello there, I'm Bujar, a student at UBT. With a passion for Computer Science, I am motivated and passionate for work.<br>
-                <strong>Background:</strong> Originally from Prizren, I bring 1 year of experience in this field. My journey in Front End began last year, when I started university.<br>
-                <strong>Mission:</strong> With Pied Piper, our mission was to make a simple website that meets the criteria and is also fun. I strongly believe in work with excitement, and it shapes my every endeavor.<br>
-                <strong>What Sets Us Apart:</strong> What makes us unique is our care free, yet planned approach. We take pride in our ability to research and figuring things out.<br>
-                <strong>Passions:</strong> Beyond tech, my heart beats for listening and making music. In my downtime, you'll catch me creating.
-            </p>
-             </div>
-             <a href="contact.php">Contact Us</a>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+             <a href="<?php echo ROOT ?>/contact">Contact Us</a>
         </div>
         <div class="footer">
             <p>© 2023 Pied Piper</p>

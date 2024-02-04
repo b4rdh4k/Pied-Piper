@@ -39,7 +39,6 @@ class Users
                 $_SESSION['lastname'] = $result->lastname;
                 $_SESSION['email'] = $email;
                 $_SESSION['group'] = $result->grouptype;
-
                 header('location: ../home');
             }else{
                 header('location: logIn');
@@ -48,6 +47,9 @@ class Users
             
         }
         $this->view('users/logIn');
+    }
+    public function signup(){
+        
     }
     public function logout(){
         session_destroy();
