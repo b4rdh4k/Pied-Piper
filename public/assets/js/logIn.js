@@ -2,14 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
 
     form.addEventListener("submit", function(event) {
-      // validimi emailit
-      const email = document.getElementById("email").value.trim();
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        event.preventDefault();
-        return;
-      }
+      // validimi username
+      const username = document.getElementById("username").value.trim();
+        if (!username) {
+            alert("Please enter your username.");
+            event.preventDefault();
+            return;
+        }
 
       // validimi passiiit
       const password = document.getElementById("password").value;

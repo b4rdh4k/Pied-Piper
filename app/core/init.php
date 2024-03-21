@@ -2,7 +2,14 @@
 
 spl_autoload_register(function($classname){
 
-	require $filename = "../app/models/".ucfirst($classname).".php";
+	$model = "../app/models/".ucfirst($classname).".php";
+    $lib = "../app/libraries/" . ucfirst($classname) . ".php";
+
+	if (file_exists($model)) {
+        require $model;
+    } elseif (file_exists($lib)) {
+        require $lib;
+    }
 });
 
 require 'config.php';

@@ -15,7 +15,10 @@ class User
 
 		'email',
 		'password',
-		'grouptype'
+		'grouptype',
+		'firstname',
+		'lastname',
+		'username'
 	];
 	
 	public function validate($data)
@@ -36,10 +39,21 @@ class User
 			$this->errors['password'] = "Password is required";
 		}
 		
-		if(empty($data['terms']))
+		if(empty($data['username']))
 		{
-			$this->errors['terms'] = "Please accept the terms and conditions";
+			$this->errors['username'] = "Username is required";
 		}
+
+		if(empty($data['firstname']))
+		{
+			$this->errors['firstname'] = "First name is required";
+		}
+
+		if(empty($data['lastname']))
+		{
+			$this->errors['lastname'] = "Last name is required";
+		}
+
 
 		if(empty($this->errors))
 		{

@@ -11,13 +11,13 @@ class Albums
     {
         if(!$_SESSION['name'])
         {
-            header('location: users/logIn');
+            header('location: ../../users/logIn');
         }
 
-        if(isset($_POST['artist']))
+        if(isset($_POST['artist_name']))
         {
             $data = [
-                'artist' => $_POST['artist'],
+                'artist' => $_POST['artist_name'],
                 'album_title' => $_POST['album_title'],
                 'rating' => $_POST['rating'],
                 'brief_review' => $_POST['brief_review'],
@@ -84,7 +84,7 @@ class Albums
             ];
 
             $album_model->update($id, $data);
-            header('location: ../../artists/viewAlbum/'.$id);
+            header('location: ../viewAlbum/'.$id);
         }
         $this->view('articles/albumEdit', $data);
     }

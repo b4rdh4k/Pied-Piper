@@ -10,14 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
+<?php
+        $flash = new Flash;
+
+        $x = $flash->get('success');
+        $y = $flash->get('danger');
+    ?>
+
+        <?php if ($x): ?>
+            <div class="alert alert-success">
+                <?= $x ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($y): ?>
+            <div class="alert alert-error">
+                <?= $y ?>
+            </div>
+        <?php endif; ?>
+
         <h1>Login Form</h1>
-        <p>Please fill out this form with the required information</p>
         <form method="post">
           <fieldset>
-            <label for="email">Email: <input id="email" name="email" type="email" required placeholder="enter your email"/></label>
-            <label for="password">Password: <input id="password" name="password" type="password" placeholder="enter password" /></label>
+          <label for="username">Enter username: <input id="username" name="username" type="text" placeholder="Enter username" required /></label>
+          <label for="password">Password: <input id="password" name="password" type="password" placeholder="enter password" /></label>
           </fieldset>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Log In" />
+          <a href="<?php echo ROOT ?>/users/signUp">Sign Up</a>
         </form>
   <script src="/public/assets/js/logIn.js"></script>
 </body>

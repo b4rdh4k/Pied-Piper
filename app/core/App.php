@@ -16,7 +16,6 @@ class App
 	public function loadController()
 	{
 		$URL = $this->splitURL();
-
 		/** select controller **/
 		$filename = "../app/controllers/".ucfirst($URL[0]).".php";
 		if(file_exists($filename))
@@ -25,7 +24,6 @@ class App
 			$this->controller = ucfirst($URL[0]);
 			unset($URL[0]);
 		}else{
-
 			$filename = "../app/controllers/_404.php";
 			require $filename;
 			$this->controller = "_404";
@@ -42,7 +40,6 @@ class App
 				unset($URL[1]);
 			}	
 		}
-
 		call_user_func_array([$controller,$this->method], $URL);
 
 	}	
