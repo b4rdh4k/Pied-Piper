@@ -9,7 +9,13 @@ class Home
 
 	public function index()
 	{
-		if(isset($_SESSION['email']))
+		if (!isset($_SESSION['username'])) {
+			// Redirect to the login page
+			header('Location: ' . ROOT . '/users/logIn');
+			exit;
+		}
+		
+		if(isset($_SESSION['username']))
 		{
 			$artist_model = new Artists_model;
 			$data['handpicked'] = $artist_model->get_4_artists();
@@ -17,6 +23,7 @@ class Home
 		}else{
 			header('location: users/logIn');
 		}
+
 	}
 
 }

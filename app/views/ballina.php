@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Foldit&display=swap" rel="stylesheet">
     </head>
-    <bodyye>
+    <body>
         <div class="container">
             <div class="navbar">
                 <img src="<?php echo ROOT ?>/assets/img/logo.png" class="logo">

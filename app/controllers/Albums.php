@@ -14,6 +14,7 @@ class Albums
             header('location: ../../users/logIn');
         }
 
+        $added_by = $_SESSION['username']; //username i adminit
         if(isset($_POST['artist_name']))
         {
             $data = [
@@ -26,6 +27,7 @@ class Albums
                 'date_reviewed' => $_POST['date_reviewed'],
                 'label' => $_POST['label'],
                 'albumimage' => $_POST['albumimage'],
+                'added_by' => $added_by,
             ];
             $album_model = new Albums_model;
 
@@ -67,6 +69,8 @@ class Albums
             header('location: users/logIn');
         }
 
+        $edited_by = $_SESSION['username'];
+
         $album_model = new Albums_model;
         $data['album_reviews'] = $album_model->first(['id' => $id]);
         if(isset($_POST['album_title']))
@@ -81,6 +85,7 @@ class Albums
                 'date_reviewed' => $_POST['date_reviewed'],
                 'label' => $_POST['label'],
                 'albumimage' => $_POST['albumimage'],
+                'edited_by' => $edited_by,
             ];
 
             $album_model->update($id, $data);
@@ -88,4 +93,15 @@ class Albums
         }
         $this->view('articles/albumEdit', $data);
     }
+
+    public function addSliderImage($album_id, $image_path) {
+        $slider_image_model = new AlbumSliderImages_model;
+        return $slider_image_model->insert(['album_id' => $album_id, 'image_path' => $image_path]);
+    }
+    
+    public function deleteSliderImage($image_id) {
+        $slider_image_model = new AlbumSliderImages_model;
+        return $slider_image_model->delete($image_id);
+    }
+    
 }

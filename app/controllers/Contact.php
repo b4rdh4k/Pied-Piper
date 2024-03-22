@@ -19,6 +19,12 @@ class Contact {
             $data['messages'] = $contact_model->findAll();
             $this->view('contact', $data);
         }
+
+        if (!isset($_SESSION['username'])) {
+            // Redirect to the login page
+            header('Location: ' . ROOT . '/users/logIn');
+            exit;
+        }
     }
 }
 ?>

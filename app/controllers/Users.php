@@ -37,8 +37,7 @@ class Users
             ];
 
             $result = $userModel->first($arr);
-
-            if ($result !== false) {
+            if ($result == true) {
                 // Logged in successfully
                 $_SESSION['grouptype'] = $result->grouptype;
                 $_SESSION['name'] = $result->firstname;
@@ -59,11 +58,14 @@ class Users
     }
 
     public function logout()
-    {
-        session_destroy();
-        header('Location: logIn');
-        exit;
-    }
+{
+    session_start(); // Start the session
+    session_unset(); // Unset all session variables
+    session_destroy(); // Destroy the session
+    header('Location: ' . ROOT . '/users/logIn'); // Redirect to login page
+    exit;
+}
+
 
     public function signUp()
     {
@@ -92,8 +94,6 @@ class Users
                 exit;
             }
     
-            // Hash the password before saving it to the database
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
             // Instantiate the User model
             $userModel = new User();
@@ -120,7 +120,7 @@ class Users
                 'firstname' => $firstName,
                 'lastname' => $lastName,
                 'email' => $email,
-                'password' => $hashedPassword,
+                'password' => $password,
                 'grouptype' => '1'
             ];
     
@@ -128,7 +128,7 @@ class Users
     
             if ($inserted) {
                 $this->flash->create('success', 'User registered successfully.');
-                header('Location: ' . ROOT . '/users/logIn');
+                header('Location: ' . ROOT . '../home');
                 exit;
             } else {
                 $this->flash->create('danger', 'Registration failed. Please try again later.');

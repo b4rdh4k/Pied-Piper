@@ -14,6 +14,8 @@ class Artists
             header('location: users/logIn');
         }
 
+        $added_by = $_SESSION['username']; //per me marr usernamein e adminit
+
         if(isset($_POST['artistName']))
         {
             $data = [
@@ -23,6 +25,7 @@ class Artists
                 'review_date' => $_POST['reviewDate'],
                 'review_content' => $_POST['reviewContent'],
                 'label' => $_POST['label'],
+                'added_by' => $added_by
             ];
             $artist_model = new Artists_model;
 
@@ -64,6 +67,8 @@ class Artists
             header('location: users/logIn');
         }
 
+        $edited_by = $_SESSION['username']; //usernamei adminit edhe ktu
+
         $artist_model = new Artists_model;
         $data['artist'] = $artist_model->first(['id' => $id]);
         if(isset($_POST['artistName']))
@@ -75,6 +80,7 @@ class Artists
                 'review_date' => $_POST['reviewDate'],
                 'review_content' => $_POST['reviewContent'],
                 'label' => $_POST['label'],
+                'edited_by' => $edited_by
             ];
 
             $artist_model->update($id, $data);

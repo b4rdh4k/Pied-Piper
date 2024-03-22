@@ -78,7 +78,29 @@
                 <div class="starz-review">
                 <p><?= $album_reviews->detailed_review ?></p>
             </div> 
+<!-- Display slider images -->
+<div id="slider">
+    <?php foreach ($slider_images as $image): ?>
+        <img src="<?= $image->image_path ?>" alt="Slider Image">
+        <?php if ($_SESSION['grouptype'] == 0): ?>
+            <!-- Option to delete slider image -->
+            <form action="<?= ROOT ?>/albums/deleteSliderImage/<?= $image->id ?>" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div>
+
+<!-- Option to upload new slider image (if user has permissions) -->
+<?php if ($_SESSION['grouptype'] == 0): ?>
+    <form action="<?= ROOT ?>/albums/uploadSliderImage" method="post" enctype="multipart/form-data">
+        <input type="file" name="slider_image">
+        <input type="hidden" name="album_id" value="<?= $album_reviews->id ?>">
+        <button type="submit">Upload Slider Image</button>
+    </form>
+<?php endif; ?>
         </div>
+
         </div>
     </div>
     <script src="/public/assets/js/albumet.js"></script>

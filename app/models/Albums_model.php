@@ -11,9 +11,13 @@ class Albums_model
 
 	protected $table = 'album_reviews';
 
-	// protected $allowedColumns = [
-	// 	'email',
-	// 	'password',
-	// ];
+	public function addAlbumReview($data)
+    {
+        // Add the admin's name to the data array
+        $data['added_by'] = $_SESSION['username']; // Assuming admin username is stored in session
+
+        // Insert new album review into the database
+        return $this->insert($data);
+    }
 	
 }
