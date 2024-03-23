@@ -22,7 +22,7 @@
                     <li><a href="<?php echo ROOT ?>/articles">Articles</a></li>
                     <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
                     <?php if($_SESSION['grouptype'] == 0) : ?>
-                        <li><a href="<?php echo ROOT ?>/userview">Users</a></li>
+                        <li><a href="<?php echo ROOT ?>/dashboard">Dashboard</a></li>
                     <?php endif; ?>
                     <?php if($_SESSION['grouptype'] == 1) : ?>
                         <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
@@ -32,7 +32,6 @@
             <div class="dropdown">
                 <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="<?php echo ROOT ?>/users/logIn">Log In</a> 
                     <a href="<?php echo ROOT ?>/users/logout">Log out</a>     
                 </div>
             </div>

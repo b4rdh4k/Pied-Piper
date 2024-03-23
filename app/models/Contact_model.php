@@ -4,6 +4,7 @@ class Contact_model {
 
     protected $table = 'messages';
 
+        
     public function findAll() {
         try {
             $query = "SELECT * FROM {$this->table} ORDER BY timestamp DESC";

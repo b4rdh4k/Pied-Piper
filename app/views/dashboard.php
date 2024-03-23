@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pied Piper - Articles</title>
-    <link rel="stylesheet" href="<?php echo ROOT ?>/assets/css/articles.css">
+    <title>Dashboards</title>
+    <link rel="stylesheet" href="<?php echo ROOT ?>/assets/css/users.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -21,9 +21,9 @@
 
                     <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                     <li><a href="<?php echo ROOT ?>/quiz">Quiz</a></li>
-                    <li><a href="">Articles</a></li>
+                    <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
                     <?php if($_SESSION['grouptype'] == 0) : ?>
-                    <li><a href="<?php echo ROOT ?>/dashboard">Dashboard</a></li>
+                    <li><a href="">Dashboard</a></li>
                     <?php endif; ?>
                     <?php if($_SESSION['grouptype'] == 1) : ?>
                     <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
@@ -36,32 +36,38 @@
                     <a href="<?php echo ROOT ?>/users/logout">Log out</a>    
                 </div>
             </div>
-      </div>
-
-      <div class="artists-section">
-            <h2>Featured Artists</h2>
-            <?php foreach($artist as $a) : ?>
-                <div class="artist">
-                    <a href="<?= ROOT ?>/artists/viewArtist/<?= $a->id ?>"><img src="<?php echo ROOT ?>/assets/img/<?= $a->artist_image ?>" alt="Artist 1"></a>
-                    <p><?= $a->artist_name ?></p>
+        </div>
+    <main>
+        <!-- Grid for dashboard -->
+        <div class="grid-container">
+            <div class="grid-item">
+                <h2>Users</h2>
+                <p id="usersCount" class="count"><?php echo $usersCount; ?></p>
+            </div>
+            <div class="grid-item">
+                <h2>Artists</h2>
+                <p id="artistCount" class="count"><?php echo $artistsCount; ?></p>
+                <a href="<?= ROOT ?>/artists/create"><button class="add-button">ADD ARTIST</button></a>
+            </div>
+            <div class="grid-item">
+                <h2>Albums</h2>
+                <p id="albumCount" class="count"><?php echo $albumsCount; ?></p>
+                <a href="<?= ROOT ?>/albums/create"><button class="add-button">ADD ALBUM</button></a>
+            </div>
+        </div>
+        <hr class="hr">
+        <!-- Message section -->
+        <h2 class="message-section-header">Messages</h2>
+        <div class="message-section" id="messageSection">
+            <?php foreach ($messages as $message): ?>
+                <div class="message">
+                <p>Name: <?php echo $message->sender_name; ?></p>
+                <p>Email: <?php echo $message->sender_email; ?></p>
+                <p>Message: <?php echo $message->message_text; ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
-        <br>
-
-        <p class="checkout">Check out these articles!</p>
-        <div class="row">
-                <?php foreach($album_reviews as $alb) : ?>
-                    <div class="artikulli">
-                        <a href="<?= ROOT ?>/albums/viewAlbum/<?= $alb->id ?>"><img src="<?php echo ROOT ?>/assets/img/<?= $alb->albumimage ?>" alt="Album 1">
-                            <p><?= $alb->artist ?>:
-                            <?=  $alb->album_title ?><p>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-        </div>
-        
-        
+    </main>
     </div>
 </body>
 </html>
