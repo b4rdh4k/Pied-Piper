@@ -1,11 +1,11 @@
-/*nuk vlen per prezantim*/
-Pied Piper eshte nje projekt qe e kemi bere per klasen Dizajni dhe Zhvillimi i Uebit, e ligjeruar nga Greta Ahma, ku ne: **Bardha Kryeziu** dhe **Bujar Dema**, kemi bashkepunuar per zhvillimin e nje blogu muzikor, i cili u inspirua nga dashuria jone per muziken dhe artin.
-Ky projekt eshte i zhvilluar fullstack, ku per anen e front-endit, kemi perdorur vetem HTML, CSS dhe JS. Javascript eshte perdorur kryesisht per validim te pyetesoreve dhe te krijimit te nje kuizi, i cili nuk ka ndonje qellim me te thelle perpos nje mundesie argetimi dhe te kalimit te kohes. Ne anen e backend, kemi perdorur PHP e shkruajtur si gjuhe Object-Oriented dhe e lidhur me databaze permes mySQL.
-Back-endin kemi vendosur ta shkruajme ne format te frameworkut MVC (Model-View-Controller), pasi qe pas kerkimit dhe keshillave qe kemi lexuar dhe degjuar, menduam qe eshte qasja me e kuptueshme.
-Projekti nuk eshte shume i komplikuar, ka ballinen, about us, quizin, artikujt (te cilet mund te jene per artiste ose per albume), kontaktin dhe nje log-in. 
-Ne faqe mund te kyqemi si admin dhe si users, dallimet mes ketyre dy grupeve eshte qe kur kyqesh si admin, te shfaqet mundesia e shtimit, editimit apo fshirjes se artikujve dhe (shikimi i perdoruesve dhe mesazheve)*, ndersa kur kyqesh si perdorues, nuk i sheh ato por te shfaqet mundesia e kontaktimit.
-*ende nuk eshte shtuar
+Pied-Piper eshte projekt per lenden Dizajn dhe Zhvillimi i Uebit, ligjeruar nga prof. Greta Ahma dhe asistuar nga ass. Bleona Gerbavci.
 
-Pasi qe vete-regjistrimi nuk eshte i mundshem, per qasje perdorim:
-**Email:** admin@admin.com, **Password:** 12345678
-**Email:** user@user.com, **Password:** useruser
+Projekti eshte i shkruar ne Object-Oriented-Programming, ku kam perdorur nje forme te nje frameworkut MVC, me databaze ne mysql dhe front-end me pure html, css dhe javascript.
+Ai permbush te gjitha kerkesat bazike, ku ka se paku 5 faqe, dinamike, slider, responsive, contact form, log-in dhe sign-up funksional, validim te dhenash nga ana e frontit dhe e backut. Role te adminit dhe userit, krijim/editim dhe fshirje te artikujve drejtperdrejte nga website, username i adminit i cili ka krijuar apo edituar nje artikull ne databaze, nje admin dashboard, etj.
+Si koncept, eshte nje tentim per krijimin e nje web aplikacioni qe ia mundeson administratorit ndarjen e shijes dhe mendimeve te tij rreth muzikes.
+
+Nje perdorues mund te krijoj llogarine direkt ne webpage (butoni sign up), por pas importimit te databazes (folderi: database file, piedpiper.sql), vec edhe ekzistojne disa usera.
+
+Per logimin si administrator, mund te perdoret:
+Username: admin2
+Password: 1
