@@ -88,16 +88,4 @@ class Albums
         }
         $this->view('articles/albumEdit', $data);
     }
-
-    public function addSliderImage($album_id, $image_path)
-    {
-        $slider_image_model = new AlbumSliderImages_model;
-        return $slider_image_model->insert(['album_id' => $album_id, 'image_path' => $image_path]);
-    }
-
-    public function deleteSliderImage($image_id)
-    {
-        $slider_image_model = new AlbumSliderImages_model;
-        return $slider_image_model->delete($image_id);
-    }
 }
