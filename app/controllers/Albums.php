@@ -1,22 +1,20 @@
-<?php 
+<?php
 
 /**
  * home class
  */
 class Albums
 {
-	use Controller;
+    use Controller;
 
     public function create($id = null)
     {
-        if(!$_SESSION['name'])
-        {
+        if (!$_SESSION['name']) {
             header('location: ../../users/logIn');
         }
 
         $added_by = $_SESSION['username']; //username i adminit
-        if(isset($_POST['artist_name']))
-        {
+        if (isset($_POST['artist_name'])) {
             $data = [
                 'artist' => $_POST['artist_name'],
                 'album_title' => $_POST['album_title'],
@@ -41,8 +39,7 @@ class Albums
 
     public function viewAlbum($id)
     {
-        if(!$_SESSION['name'])
-        {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
@@ -53,8 +50,7 @@ class Albums
 
     public function delete($id)
     {
-        if(!$_SESSION['name'])
-        {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
@@ -63,9 +59,9 @@ class Albums
         header('location: ../../articles');
     }
 
-    public function edit($id){
-        if(!$_SESSION['name'])
-        {
+    public function edit($id)
+    {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
@@ -73,8 +69,7 @@ class Albums
 
         $album_model = new Albums_model;
         $data['album_reviews'] = $album_model->first(['id' => $id]);
-        if(isset($_POST['album_title']))
-        {
+        if (isset($_POST['album_title'])) {
             $data = [
                 'artist' => $_POST['artist'],
                 'album_title' => $_POST['album_title'],
@@ -89,19 +84,20 @@ class Albums
             ];
 
             $album_model->update($id, $data);
-            header('location: ../viewAlbum/'.$id);
+            header('location: ../viewAlbum/' . $id);
         }
         $this->view('articles/albumEdit', $data);
     }
 
-    public function addSliderImage($album_id, $image_path) {
+    public function addSliderImage($album_id, $image_path)
+    {
         $slider_image_model = new AlbumSliderImages_model;
         return $slider_image_model->insert(['album_id' => $album_id, 'image_path' => $image_path]);
     }
-    
-    public function deleteSliderImage($image_id) {
+
+    public function deleteSliderImage($image_id)
+    {
         $slider_image_model = new AlbumSliderImages_model;
         return $slider_image_model->delete($image_id);
     }
-    
 }

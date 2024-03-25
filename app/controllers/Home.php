@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * home class
@@ -14,16 +14,10 @@ class Home
 			header('Location: ' . ROOT . '/users/logIn');
 			exit;
 		}
-		
-		if(isset($_SESSION['username']))
-		{
-			$artist_model = new Artists_model;
-			$data['handpicked'] = $artist_model->get_4_artists();
-			$this->view('ballina', $data);
-		}else{
-			header('location: users/logIn');
-		}
 
+		$albumsModel = new Albums_model();
+		$img = $albumsModel->fetchAlbumImages();
+
+		$this->view('ballina', ['sliderImages' => $img]);
 	}
-
 }

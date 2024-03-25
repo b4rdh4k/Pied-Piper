@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Artist</title>
     <link rel="stylesheet" href="<?php echo ROOT ?>/assets/css/createArtist.css">
 </head>
+
 <body>
     <form method="POST" action="<?= ROOT ?>/artists/edit/<?= $artist->id ?>" id="artistForm">
         <h1>Editing Artist: <?= $artist->artist_name ?></h1>
@@ -38,4 +40,5 @@
         <button type="submit">Edit</button>
     </form>
 </body>
+
 </html>

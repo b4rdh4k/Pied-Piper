@@ -3,8 +3,9 @@
 class About
 {
     use Controller;
-    public function index(){
-        if(!isset($_SESSION['username'])) {
+    public function index()
+    {
+        if (!isset($_SESSION['username'])) {
             header('location: users/logIn');
             exit();
         }
@@ -17,6 +18,5 @@ class About
             header('Location: ' . ROOT . '/users/logIn');
             exit;
         }
-
     }
 }

@@ -1,8 +1,10 @@
 <?php
-class Contact {
+class Contact
+{
     use Controller;
 
-    public function index() {
+    public function index()
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'];
             $email = $_POST['email'];
@@ -27,4 +29,3 @@ class Contact {
         }
     }
 }
-?>

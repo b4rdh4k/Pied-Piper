@@ -1,7 +1,9 @@
 <?php
-class Quiz{
+class Quiz
+{
     use Controller;
-    public function index(){
+    public function index()
+    {
         $this->view('quiz');
 
         if (!isset($_SESSION['username'])) {

@@ -9,4 +9,6 @@ class Index
         'email',
         'password'
     ];
+
+    
 }

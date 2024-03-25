@@ -12,7 +12,7 @@ class Articles
             exit;
         }
 
-        
+
 
         $artist_model = new Artists_model;
         $album_model = new Albums_model;
@@ -21,10 +21,5 @@ class Articles
         $data['album_reviews'] = $album_model->findAll();
 
         $this->view('articles/index', $data);
-
-
-
     }
 }
-
-?>

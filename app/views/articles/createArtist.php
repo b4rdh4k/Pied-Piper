@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Artist</title>
     <link rel="stylesheet" href="<?php echo ROOT ?>/assets/css/createArtist.css">
 </head>
+
 <body>
     <form method="POST" action="" id="artistForm">
         <h1>Create New Artist</h1>
@@ -38,4 +40,5 @@
         <button type="submit">Create</button>
     </form>
 </body>
+
 </html>

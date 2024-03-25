@@ -1,11 +1,13 @@
 <?php
-class Contact_model {
+class Contact_model
+{
     use Model;
 
     protected $table = 'messages';
 
-        
-    public function findAll() {
+
+    public function findAll()
+    {
         try {
             $query = "SELECT * FROM {$this->table} ORDER BY timestamp DESC";
             return $this->query($query);
@@ -14,10 +16,9 @@ class Contact_model {
             return false;
         }
     }
-    public function saveMessage($name, $email, $message){
+    public function saveMessage($name, $email, $message)
+    {
         $query = "INSERT INTO {$this->table} (user_id, sender_name, sender_email, message_text) VALUES (?, ?, ?, ?)";
         $this->query($query, [1, $name, $email, $message]);
     }
-
 }
-?>

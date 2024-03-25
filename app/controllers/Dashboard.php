@@ -3,7 +3,7 @@
 class Dashboard
 {
     use Controller;
-    
+
     public function index()
     {
         if (!isset($_SESSION['username'])) {
@@ -16,10 +16,10 @@ class Dashboard
         $allUsers = $user_model->findAll(); // Fetch all users
         // Count the total number of users
         $usersCount = count($allUsers);
-        
+
         // Pass the user count to the view
         $data['usersCount'] = $usersCount;
-        
+
         //per artistat
         $artist_model = new Artists_model;
         $allArtists = $artist_model->findAll(); // Fetch all artists

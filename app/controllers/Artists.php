@@ -1,23 +1,21 @@
-<?php 
+<?php
 
 /**
  * home class
  */
 class Artists
 {
-	use Controller;
+    use Controller;
 
     public function create($id = null)
     {
-        if(!$_SESSION['name'])
-        {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
         $added_by = $_SESSION['username']; //per me marr usernamein e adminit
 
-        if(isset($_POST['artistName']))
-        {
+        if (isset($_POST['artistName'])) {
             $data = [
                 'artist_name' => $_POST['artistName'],
                 'genre' => $_POST['genre'],
@@ -39,8 +37,7 @@ class Artists
 
     public function viewArtist($id)
     {
-        if(!$_SESSION['name'])
-        {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
@@ -51,8 +48,7 @@ class Artists
 
     public function delete($id)
     {
-        if(!$_SESSION['name'])
-        {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
@@ -61,9 +57,9 @@ class Artists
         header('location: ../../articles');
     }
 
-    public function edit($id){
-        if(!$_SESSION['name'])
-        {
+    public function edit($id)
+    {
+        if (!$_SESSION['name']) {
             header('location: users/logIn');
         }
 
@@ -71,8 +67,7 @@ class Artists
 
         $artist_model = new Artists_model;
         $data['artist'] = $artist_model->first(['id' => $id]);
-        if(isset($_POST['artistName']))
-        {
+        if (isset($_POST['artistName'])) {
             $data = [
                 'artist_name' => $_POST['artistName'],
                 'genre' => $_POST['genre'],
@@ -84,7 +79,7 @@ class Artists
             ];
 
             $artist_model->update($id, $data);
-            header('location: ../../artists/viewArtist/'.$id);
+            header('location: ../../artists/viewArtist/' . $id);
         }
         $this->view('articles/artistEdit', $data);
     }

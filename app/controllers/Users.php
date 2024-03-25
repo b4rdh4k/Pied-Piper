@@ -20,9 +20,9 @@ class Users
         if (isset($_POST['username'])) { // Check if the log in form is submitted
             $username = $_POST['username'];
             $password = $_POST['password'];
-    
+
             // Validate form data (you can add more validation as needed)
-            if (empty($username) || empty($password)){
+            if (empty($username) || empty($password)) {
                 // Handle validation errors
                 $this->flash->create('danger', 'Please fill out all the fields.');
                 header('Location: logIn');
@@ -58,13 +58,13 @@ class Users
     }
 
     public function logout()
-{
-    session_start(); // Start the session
-    session_unset(); // Unset all session variables
-    session_destroy(); // Destroy the session
-    header('Location: ' . ROOT . '/users/logIn'); // Redirect to login page
-    exit;
-}
+    {
+        session_start(); // Start the session
+        session_unset(); // Unset all session variables
+        session_destroy(); // Destroy the session
+        header('Location: ' . ROOT . '/users/logIn'); // Redirect to login page
+        exit;
+    }
 
 
     public function signUp()
@@ -78,7 +78,7 @@ class Users
             $password = $_POST['new_password'];
             $confirmPassword = $_POST['confirm_password'];
             $termsAndConditions = isset($_POST['terms_and_conditions']) ? $_POST['terms_and_conditions'] : false;
-    
+
             // Validate form data (you can add more validation as needed)
             if (empty($username) || empty($firstName) || empty($lastName) || empty($email) || empty($password) || empty($confirmPassword) || !$termsAndConditions) {
                 // Handle validation errors
@@ -86,18 +86,18 @@ class Users
                 header('Location: signUp');
                 exit;
             }
-    
+
             // Check if passwords match
             if ($password !== $confirmPassword) {
                 $this->flash->create('danger', 'The passwords do not match!');
                 header('Location: signUp');
                 exit;
             }
-    
-    
+
+
             // Instantiate the User model
             $userModel = new User();
-    
+
             // Check if the username already exists in the database
             $existingUser = $userModel->first(['username' => $username]);
             if ($existingUser) {
@@ -105,7 +105,7 @@ class Users
                 header('Location: signUp');
                 exit;
             }
-    
+
             // Check if the email already exists in the database
             $existingEmail = $userModel->first(['email' => $email]);
             if ($existingEmail) {
@@ -113,7 +113,7 @@ class Users
                 header('Location: signUp');
                 exit;
             }
-    
+
             // Insert new user into the database
             $user = [
                 'username' => $username,
@@ -123,9 +123,9 @@ class Users
                 'password' => $password,
                 'grouptype' => '1'
             ];
-    
+
             $inserted = $userModel->insert($user);
-    
+
             if ($inserted) {
                 $this->flash->create('success', 'User registered successfully.');
                 header('Location: ' . ROOT . '../home');
@@ -136,7 +136,7 @@ class Users
                 exit;
             }
         }
-    
+
         $this->view('users/signUp');
     }
 }

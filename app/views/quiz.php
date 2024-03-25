@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang = "eng">
+<html lang="eng">
+
 <head>
     <title>Quiz</title>
     <meta charset="utf-8">
@@ -10,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
@@ -21,11 +23,12 @@
                 <ul>
                     <li><a href="<?php echo ROOT ?>/home/index">Home</a></li>
                     <li><a href="">Quiz</a></li>
+                    <li><a href="<?php echo ROOT ?>/about">About</a></li>
                     <li><a href="<?php echo ROOT ?>/articles/index">Articles</a></li>
-                    <?php if($_SESSION['grouptype'] == 0) : ?>
+                    <?php if ($_SESSION['grouptype'] == 0) : ?>
                         <li><a href="<?php echo ROOT ?>/dashboard">Dashboard</a></li>
                     <?php endif; ?>
-                    <?php if($_SESSION['grouptype'] == 1) : ?>
+                    <?php if ($_SESSION['grouptype'] == 1) : ?>
                         <li><a href="<?php echo ROOT ?>/contact">Contact</a></li>
                     <?php endif; ?>
                 </ul>
@@ -33,10 +36,11 @@
             <div class="dropdown">
                 <img src="<?php echo ROOT ?>/assets/img/menu.png" class="menu-icon" alt="drop-down menu">
                 <div class="dropdown-content">
-                    <a href="<?php echo ROOT ?>/users/logout">Log out</a>                    
+                    <a href="<?php echo ROOT ?>/users/logout">Log out</a>
                 </div>
             </div>
-      </div>
+        </div>
+        <hr>
         <!--quiz-->
         <div id="quizquery">
             <h1>Find out what kind of Babastars fan are you.</h1>
@@ -49,4 +53,5 @@
     </div>
     <script src="<?php echo ROOT ?>/assets/js/quiz.js"></script>
 </body>
+
 </html>

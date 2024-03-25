@@ -3,45 +3,44 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-}
-
-body{
+  }
+  
+  body{
     margin: 0;
     padding: 0;
-    background-color: #0e1d4b;
-}
-.container{
+    background-color: #d9d9d9;
+  }
+  .container{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/background.webp);
     background-position: center;
     background-size: cover;
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
     
-}
-.navbar{
+  }
+  .navbar{
     height: 12%;
     padding: 1rem 0;
     display: flex;
     align-items: center; 
-}
-.logo{
+  }
+  .logo{
     width: 10%;
     cursor: pointer;
-}
-.menu-icon{
+  }
+  .menu-icon{
     width: 20px;
     cursor: pointer;
     margin-left: 20px;
-}
-.dropdown {
+  }
+  .dropdown {
     position: relative;
     display: inline-block;
     margin-right: 20px;
-}
-.dropdown-content {
+  }
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: rgba(36, 0, 70, 0.2);
@@ -49,43 +48,53 @@ body{
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(231, 198, 255, 0.5);
     z-index: 1;
-}
-
-.dropdown-content a {
-    color: #EAFFFF;
+  }
+  
+  .dropdown-content a {
+    color: #1d3557;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #1d3557;
     border-radius: 10px;
     color: #1f1e1e;
-}
-.dropdown:hover .dropdown-content {
+  }
+  .dropdown:hover .dropdown-content {
     display: block;
-}
-nav{
+  }
+  nav{
     flex: 1;
     text-align: right;
-}
-nav ul li{
+  }
+  nav ul li{
     list-style: none;
     display: inline-block;
     margin-left: 3%;
-}
-nav ul li a{
+  }
+  nav ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #1d3557;
     font-size: 13px;
+    font-weight: bold;
+  }
+  hr{
+    border: 0;
+    height: 1px;
+    background: #1d3557;
+    margin-top: 5px;
+  }
+
+  .col {
+    flex: 1;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
 }
 
-.col{
-    flex: 1;
-    margin-left: 7%;
-    flex-basis: 100%;
-}
 .card{
     width: 500px;
     height: 540px;
@@ -95,7 +104,7 @@ nav ul li a{
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 50px;
     background-position: center;
     background-size: cover;
@@ -110,46 +119,21 @@ nav ul li a{
 .card p{   
     font-size: 15px;
     font-style: italic;
-    color: #EAFFFF;
+    color: #1d3557;
+    text-align: left;
 }
-.card h2{
+.card h2 {
     font-size: 30px;
-    color: #EAFFFF;
+    color: #1d3557;
+    text-align: center;
 }
+
 p{
-    color: #fff;
+    color: #1d3557;
     font-size: 15px;
     margin-top: 50px;
     line-height: 30px;
     text-align: center;
-}
-.footer p{
-    color: #fff;
-    font-size: 15px;
-    margin-top: 50px;
-    line-height: 30px;
-    text-align: center;
-    padding-bottom: 14px;
-}
-
-.footer {
-    padding: 20px 10px;  /* Added padding for better appearance */
-    text-align: center;
-}
-
-.footer a {
-    color: #EAFFFF;
-    text-decoration: none;
-    margin-top: 20px;  /* Adjusted margin for better spacing */
-    padding: 8px 16px;
-    border-radius: 5px;
-    border: 1px solid #EAFFFF;
-    transition: background-color 0.3s ease;
-}
-
-.footer a:hover {
-    background-color: #EAFFFF;
-    color: #1f1e1e;
 }
 
 
